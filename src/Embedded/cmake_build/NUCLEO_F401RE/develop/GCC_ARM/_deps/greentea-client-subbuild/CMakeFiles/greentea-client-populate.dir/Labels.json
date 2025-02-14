@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/_deps/greentea-client-subbuild/CMakeFiles/greentea-client-populate"
+		},
+		{
+			"file" : "/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/_deps/greentea-client-subbuild/CMakeFiles/greentea-client-populate.rule"
+		},
+		{
+			"file" : "/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/_deps/greentea-client-subbuild/CMakeFiles/greentea-client-populate-complete.rule"
+		},
+		{
+			"file" : "/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/_deps/greentea-client-subbuild/greentea-client-populate-prefix/src/greentea-client-populate-stamp/greentea-client-populate-install.rule"
+		},
+		{
+			"file" : "/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/_deps/greentea-client-subbuild/greentea-client-populate-prefix/src/greentea-client-populate-stamp/greentea-client-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/_deps/greentea-client-subbuild/greentea-client-populate-prefix/src/greentea-client-populate-stamp/greentea-client-populate-download.rule"
+		},
+		{
+			"file" : "/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/_deps/greentea-client-subbuild/greentea-client-populate-prefix/src/greentea-client-populate-stamp/greentea-client-populate-update.rule"
+		},
+		{
+			"file" : "/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/_deps/greentea-client-subbuild/greentea-client-populate-prefix/src/greentea-client-populate-stamp/greentea-client-populate-patch.rule"
+		},
+		{
+			"file" : "/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/_deps/greentea-client-subbuild/greentea-client-populate-prefix/src/greentea-client-populate-stamp/greentea-client-populate-configure.rule"
+		},
+		{
+			"file" : "/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/_deps/greentea-client-subbuild/greentea-client-populate-prefix/src/greentea-client-populate-stamp/greentea-client-populate-build.rule"
+		},
+		{
+			"file" : "/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/_deps/greentea-client-subbuild/greentea-client-populate-prefix/src/greentea-client-populate-stamp/greentea-client-populate-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"greentea-client-populate"
+		],
+		"name" : "greentea-client-populate"
+	}
+}
