@@ -43,6 +43,7 @@ from src.utils.messages.allMessages import (
 from src.utils.messages.messageHandlerSender import messageHandlerSender
 from src.utils.messages.messageHandlerSubscriber import messageHandlerSubscriber
 from src.templates.threadwithstop import ThreadWithStop
+from src.hardware.camera.utils.swald import swaaald 
 
 
 class threadCamera(ThreadWithStop):
@@ -149,6 +150,9 @@ class threadCamera(ThreadWithStop):
             if send:
                 mainRequest = self.camera.capture_array("main")
                 serialRequest = self.camera.capture_array("lores")  # Will capture an array that can be used by OpenCV library
+
+                frame_bgr = cv2.cvtColor(mainRequest, cv2.COLOR_RGB2BGR)
+                mainRequest = swaaald(frame_bgr)
 
                 if self.recording == True:
                     self.video_writer.write(mainRequest)

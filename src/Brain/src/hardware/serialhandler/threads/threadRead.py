@@ -123,7 +123,6 @@ class threadRead(ThreadWithStop):
 
     def sendqueue(self, buff):
         """This function select which type of message we receive from NUCLEO and send the data further."""
-
         if '@' in buff and ':' in buff:
             action, value = buff.split(":") # @action:value;;
             action = action[1:]

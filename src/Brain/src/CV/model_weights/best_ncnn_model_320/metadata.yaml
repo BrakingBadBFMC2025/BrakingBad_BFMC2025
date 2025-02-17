@@ -1,0 +1,25 @@
+description: Ultralytics YOLO11n model trained on /content/Traffic-Light-Detection-4/data.yaml
+author: Ultralytics
+date: '2025-02-17T15:31:01.922346'
+version: 8.3.75
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 320
+- 320
+names:
+  0: Crosswalk
+  1: Highway end
+  2: Highway entry
+  3: No Entry
+  4: One Way
+  5: Parking
+  6: Priority
+  7: Roundabout
+  8: Stop
+args:
+  batch: 1
+  half: false

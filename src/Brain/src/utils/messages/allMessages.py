@@ -85,7 +85,14 @@ class AutoSteerMotor(Enum):
     msgID = 2
     msgType = "str"
 
-################################# From Dashboard ##################################
+class Destination(Enum):
+    Queue = "General"
+    Owner = "Control"
+    msgID = 3
+    msgType = "dict"
+
+
+################################# From CV ##################################
 class Trajectory_angle_rads(Enum):
     Queue = "General"
     Owner = "CV"

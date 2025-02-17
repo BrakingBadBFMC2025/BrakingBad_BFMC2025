@@ -200,7 +200,6 @@ class threadWrite(ThreadWithStop):
 
                         controlRecv = self.controlSubscriber.receive()
                         if controlRecv is not None:
-                            print("POUTSA")
                             if self.debugger:
                                 self.logger.info(controlRecv) 
                             command = {
@@ -210,7 +209,6 @@ class threadWrite(ThreadWithStop):
                                 "steer": int(controlRecv["Steer"]),
                             }
                             self.sendToSerial(command)
-                            print("SERIAL COMMAND: ",command)
 
                     instantRecv = self.instantSubscriber.receive()
                     if instantRecv is not None: 

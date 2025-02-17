@@ -2,20 +2,20 @@ from src.templates.threadwithstop import ThreadWithStop
 from src.utils.messages.allMessages import (mainCamera)
 from src.utils.messages.messageHandlerSubscriber import messageHandlerSubscriber
 from src.utils.messages.messageHandlerSender import messageHandlerSender
+from src.hardware.Control.utils.PID_control import PID_control
+from src.hardware.Control.utils.bezier_curve_calc import *
+from src.hardware.Localization.utils.F_kin_ackerman import F_kin_ackerman
 import src.utils.messages.allMessages as allMessages
 import time
 import math
+import ast
 
-MAX_STEERING = 25
-MAX_SPEED = 500
-set_x=0
-set_y=0
+MAX_STEERING = 250
+MAX_SPEED = 100
 
 Kp_steer = 0.704000
 Kd_steer = 0.010422
-speed=0
-steer_rads:float =0
-steer_deg:float =0
+arrival_threshold = 20
 
 ctr_command = {
   "Time": 0,
@@ -23,8 +23,34 @@ ctr_command = {
   "Steer": 0
 }
 
+#time in seconds, speed in mm/s, steer in degrees
+def parse_ctr_command(time, speed, steer):
+    global ctr_command
+    ctr_command["Time"] = int(time*10)
+    ctr_command["Speed"] = int(speed)
+    ctr_command["Steer"] = int(steer*10)
+    return ctr_command
+    
+def get_ctr_command():
+    global ctr_command
+    time = ctr_command["Time"]/10
+    speed = ctr_command["Speed"]
+    steer = ctr_command["Steer"]/10
+    return time, speed, steer
+
+
+
 def LOG(msg):
     print("-> CONTROL LOG::",msg,"\n")
+
+def arrived(x_distance, y_distance):
+    dist = math.sqrt((x_distance)**2 + (y_distance)**2)
+    if dist < arrival_threshold:
+        return True
+    else:
+        return False
+    
+
 
 def degangle_to_steer(degangle):
     steer =0
@@ -52,16 +78,15 @@ class threadControl(ThreadWithStop):
         self.logging = logging
         self.debugging = debugging
         self.auto = auto
+        self.controller = PID_control(MAX_SPEED, MAX_STEERING)
+
+        self.f_kin = F_kin_ackerman() # TODO this is to be replaced after localization package is complete
 
         self.subscribe()
         super(threadControl, self).__init__()
 
     def run(self): 
-        global set_x
-        global set_y
         global ctr_command
-        global steer_deg
-
 
         time.sleep(2)
         if self.debugging:
@@ -72,33 +97,103 @@ class threadControl(ThreadWithStop):
         while(self.kl_sub.receive() is None):
             time.sleep(1)
 
+        
+        
+        time.sleep(1)
 
-        if self.debugging:
-            LOG("Engine enabled")
-            LOG("Sending control commands...")
-        
-        
-        #self.speed_pub.send("50")
+        x_curr=0
+        y_curr=0
+        rot_curr=0
+
+        x_distance=0 #in mm
+        y_distance=0 #in mm
+        rot_distance=0 #in degrees
+
+        x_destination =0 #in mm
+        y_destination=0 #in mm
+
+        time_interval = 0.3 #in seconds
+        vel =0 #in mm/s
+        steer =0 #in degrees
+
+        waiting =1 # 1 if the car is expecting new command
 
         time.sleep(1)
-        while(True):
-            angle = self.trajectory_angle_sub.receive()
-            steer=0
-            if angle is not None:
-                angle = math.degrees(angle)
-                steer=degangle_to_steer(angle)
-                #self.steer_pub.send(str(steer*10))
-            
-            print("angle recvd: ", angle)
-            #print("steer: ",steer*10)
-            
 
-            time.sleep(0.5)
+        while(self.is_alive): #until manual shut down
 
+            #checking if there is a new move given
+            #if yes then replace the old error and calc again
+            dest_dict = self.dest_sub.receive()
+            if(dest_dict is not None):
+                x_destination = int(dest_dict["x"])
+                y_destination = int(dest_dict["y"])
+
+                #check if destination is reachable by car's model
+                if self.f_kin.move_validator(MAX_STEERING/10,x_destination,y_destination):
+                    msg = "Moving to :"+str(x_destination)+", "+str(y_destination)
+                    LOG(msg)
+
+                    x_distance = x_destination
+                    y_distance = y_destination
+                    x_curr =0
+                    y_curr=0
+                    rot_curr=0
+                    rot_distance = math.degrees(math.atan2(x_distance, y_distance))
+                    waiting =0
+                else:
+                    LOG("WARNING: Unreachable move.")
+                    x_distance=0
+                    y_distance=0
+                    rot_distance =0
+                    self.brake_pub.send(0.0)
+
+            #if car is not at destination, execute movement
+            if not arrived(x_distance, y_distance):
+                msg = "Distances to target: x:" +str(x_distance) + ", y:"+ str(y_distance) + ", rot:" + str(rot_distance)
+                LOG(msg)
+                
+                #calculating needed vel and steer to reach position
+                vel, steer = self.controller.calc(x_distance, y_distance, rot_distance)
+                msg = "Calx: vel:" + str(vel) +", steer: " +str(steer)
+                LOG(msg)
+
+                #estimating expected displacement based on command
+                delta_x, delta_y, rot_curr = self.f_kin.get_deltas_from_commands(time_interval, vel, steer, rot_curr)
+
+                #updating distances (needed for the next loop of calculation) 
+                x_curr += delta_x
+                y_curr += delta_y
+
+                x_distance = x_destination - x_curr
+                y_distance = y_destination - y_curr
+                rot_distance = math.degrees(math.atan2(x_distance, y_distance)) - rot_curr
+
+                print("displacements: ",x_curr,y_curr,rot_curr)
+
+                #sending command
+                parse_ctr_command(time_interval, vel, steer)
+                self.ctr_pub.send(ctr_command)
+
+                # this is to avoid extreme overshoot
+                if(x_distance<-arrival_threshold or y_distance<-arrival_threshold):
+                    x_distance=0
+                    y_distance=0
+                    rot_distance=0
+                    x_curr=0
+                    y_curr=0
+                    rot_curr=0
+
+                time.sleep(time_interval) #TODO is that good practice tho?
+
+            else:
+                if waiting ==0:
+                    x_curr=0
+                    y_curr=0
+                    rot_curr=0
+                    LOG("Expecting command...")
+                    waiting =1
         
-        self.speed_pub.send("0")
-
-
         if self.debugging:
             LOG("CONTROL THREAD EXITING")
         
@@ -106,14 +201,17 @@ class threadControl(ThreadWithStop):
 
     def subscribe(self):
         """Subscribes to the messages you are interested in"""
-        self.kl_pub= messageHandlerSender(self.queuesList, allMessages.Klem)
         self.kl_sub = messageHandlerSubscriber(self.queuesList, allMessages.Klem, "lastOnly", True)
+        self.trajectory_angle_sub = messageHandlerSubscriber(self.queuesList, allMessages.Trajectory_angle_rads, "lastOnly", True)
+        self.imu_sub = messageHandlerSubscriber(self.queuesList, allMessages.ImuData, "lastOnly", True)
+        self.dest_sub = messageHandlerSubscriber(self.queuesList, allMessages.Destination, "lastOnly", True)
 
+
+        self.kl_pub= messageHandlerSender(self.queuesList, allMessages.Klem)
         self.speed_pub = messageHandlerSender(self.queuesList, allMessages.SpeedMotor)
         self.steer_pub = messageHandlerSender(self.queuesList, allMessages.SteerMotor)
         self.brake_pub = messageHandlerSender(self.queuesList, allMessages.Brake)
         self.ctr_pub = messageHandlerSender(self.queuesList, allMessages.Control)
-        self.trajectory_angle_sub = messageHandlerSubscriber(self.queuesList, allMessages.Trajectory_angle_rads, "lastOnly", True)
 
 
         pass

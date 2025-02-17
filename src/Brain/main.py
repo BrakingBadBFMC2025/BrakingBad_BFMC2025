@@ -60,8 +60,12 @@ from src.data.Semaphores.Semaphores import processSemaphores
 from src.data.TrafficCommunication.processTrafficCommunication import processTrafficCommunication
 from src.utils.ipManager.IpReplacement import IPManager
 # ------ New component imports starts here ------#
+from src.utils.messages.messageHandlerSender import messageHandlerSender
+import src.utils.messages.allMessages as allMessages
+
 from src.hardware.Control.processControl import processControl
 from src.CV.CV.processCV import processCV
+from src.hardware.Localization.processLocalization import processLocalization
 
 # ------ New component imports ends here ------#
 # ======================================== SETTING UP ====================================
@@ -77,14 +81,15 @@ logging = logging.getLogger()
 
 
 Dashboard = True
-Camera = False
+Camera = True
 Semaphores = False
 TrafficCommunication = False
 SerialHandler = True
 
 # ------ New component flags starts here ------#
 Control = True
-CV = True
+CV = False
+Localization = False
 # ------ New component flags ends here ------#
 
 # ===================================== SETUP PROCESSES ==================================
@@ -103,7 +108,6 @@ IpChanger.replace_ip_in_file()
 if SerialHandler:
     processSerialHandler = processSerialHandler(queueList, logging, debugging = False)
     allProcesses.append(processSerialHandler)
-    
     
 
 # Initializing dashboard
@@ -137,6 +141,11 @@ if CV:
     processCV = processCV(queueList, logging, debugging=True)
     allProcesses.append(processCV)
 
+if Localization:
+    processLocalization = processLocalization(queueList, logging, debugging=True)
+    allProcesses.append(processLocalization)
+
+
 # ------ New component runs ends here ------#
 
 # ===================================== START PROCESSES ==================================
@@ -162,9 +171,22 @@ c4_bomb = r"""
 print(c4_bomb)
 
 # ===================================== STAYING ALIVE ====================================
-blocker = Event()
+#blocker = Event()
+dest_pub = messageHandlerSender(queueList, allMessages.Destination)
 try:
-    blocker.wait()
+    #blocker.wait()
+    while(True):
+        x = input("set x: ")
+        y = input("set_y: ")
+
+        my_dict = {
+            "x": x,
+            "y": y
+        }
+
+        dest_pub.send(my_dict)
+        time.sleep(1)
+
 except KeyboardInterrupt:
     print("\nCatching a KeyboardInterruption exception! Shutdown all processes.\n")
     big_text = """
