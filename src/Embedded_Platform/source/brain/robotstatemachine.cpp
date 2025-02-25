@@ -251,7 +251,7 @@ namespace brain{
         int time_deciseconds_but_int;
         uint8_t time_deciseconds;
 
-        uint8_t parsed = sscanf(message, "%d;%d;%d", &speed, &steer, &time_deciseconds_but_int); //you cant use %hhu here bc a number with 2 digits is parsed as 2 characters you morons
+        uint8_t parsed = sscanf(message, "%d;%d;%d", &speed, &steer, &time_deciseconds_but_int); //you cant use %hhu here bc a number with 2 digits is parsed as 2 characters
         time_deciseconds = time_deciseconds_but_int; //complete horsepiss, but dosnt work otherwise
 
         sprintf(response, "ctr recv: %d, %d, %d\n",speed,steer,time_deciseconds);

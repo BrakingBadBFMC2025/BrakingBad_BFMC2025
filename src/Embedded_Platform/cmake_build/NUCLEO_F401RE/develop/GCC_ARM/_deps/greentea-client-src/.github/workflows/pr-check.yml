@@ -1,0 +1,70 @@
+name: Test greentea-client
+
+on: [push, pull_request]
+
+jobs:
+  astyle:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install astyle
+      run: sudo apt-get install -y astyle
+
+    - name: Run astyle
+      run: |
+          find . -type f \( -name "*.cpp" -or -name "*.c" -or -name "*.h" -or -name "*.hpp" \) \
+            -exec astyle -n --options=.astylerc {} \;
+          git diff --exit-code --diff-filter=d --color
+
+  test-app:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install CMake and Ninja
+      uses: lukka/get-cmake@latest
+
+    - name: Build Example Applications
+      run: |
+        cmake -S . -B __build -GNinja
+        cmake --build __build
+
+    - name: Install greentea-client
+      run: |
+        cmake -S . -B __build -GNinja
+        cmake --build __build
+        sudo cmake --install __build
+
+    - name: Test downstream application can use find_package
+      run: |
+        cmake -S tests/integration/imported-targets -B __downstream_build -GNinja
+        cmake --build __downstream_build
+
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Install CMake and Ninja
+      uses: lukka/get-cmake@latest
+
+    - name: Install lcov
+      run: sudo apt-get install -y lcov
+
+    - name: Run Unit Tests
+      run: |
+        cmake -S . -B __build -GNinja -DENABLE_COVERAGE=ON
+        cmake --build __build
+        cmake --build __build --target test
+
+    - name: Create Coverage Report
+      run: |
+          lcov --directory . --capture --output-file coverage.info
+          lcov --remove coverage.info '/usr/*' '*/tests/*' '*/examples/*' '*/_deps/*' --output-file coverage.info
+          lcov --list coverage.info
+
+    - name: Upload Coverage Report to codecov.io
+      run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Codecov upload failed"
