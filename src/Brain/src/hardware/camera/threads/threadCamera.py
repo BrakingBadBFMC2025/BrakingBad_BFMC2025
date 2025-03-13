@@ -39,11 +39,14 @@ from src.utils.messages.allMessages import (
     Record,
     Brightness,
     Contrast,
+    Sign,
 )
 from src.utils.messages.messageHandlerSender import messageHandlerSender
 from src.utils.messages.messageHandlerSubscriber import messageHandlerSubscriber
 from src.templates.threadwithstop import ThreadWithStop
-from src.hardware.camera.utils.swald import swaaald 
+from src.hardware.camera.utils.swald import swaaald
+from src.hardware.camera.utils.yolo_sign_detection import SignDetector 
+
 
 
 class threadCamera(ThreadWithStop):
@@ -60,7 +63,7 @@ class threadCamera(ThreadWithStop):
         self.queuesList = queuesList
         self.logger = logger
         self.debugger = debugger
-        self.frame_rate = 5
+        self.frame_rate = 20
         self.recording = False
 
         self.video_writer = ""
@@ -68,6 +71,10 @@ class threadCamera(ThreadWithStop):
         self.recordingSender = messageHandlerSender(self.queuesList, Recording)
         self.mainCameraSender = messageHandlerSender(self.queuesList, mainCamera)
         self.serialCameraSender = messageHandlerSender(self.queuesList, serialCamera)
+
+        self.sign_pub = messageHandlerSender(self.queuesList, Sign)
+
+        self.sign_detector = SignDetector(model_path="/home/bb/Brain/src/hardware/camera/utils/best.pt", conf=0.5, device="cpu") #instance of the sign detector
 
         self.subscribe()
         self._init_camera()
@@ -141,7 +148,7 @@ class threadCamera(ThreadWithStop):
                             "output_video" + str(time.time()) + ".avi",
                             fourcc,
                             self.frame_rate,
-                            (2048, 1080),
+                            (640, 480),
                         )
 
             except Exception as e:
@@ -152,15 +159,49 @@ class threadCamera(ThreadWithStop):
                 serialRequest = self.camera.capture_array("lores")  # Will capture an array that can be used by OpenCV library
 
                 frame_bgr = cv2.cvtColor(mainRequest, cv2.COLOR_RGB2BGR)
-                mainRequest = swaaald(frame_bgr)
+
+                lane_frame = frame_bgr.copy()
+                sign_frame = frame_bgr.copy()
+
+                #lane_detection_result = swaaald(lane_frame)
+                lane_detection_result = lane_frame
+
+                # detect_sign() returns a list of detections and an annotated image.
+                sign_detections, sign_detection_result = self.sign_detector.detect_sign(sign_frame)
+
+                least_dist = 80
+                nearest_sign = None
+
+                for detection in sign_detections:
+                    if detection['z']<least_dist:
+                        nearest_sign = detection
+                        least_dist = detection['z']
+
+                if nearest_sign is not None:
+                    self.sign_pub.send(nearest_sign)                        
+                
+
+                        
+                    
+                # Ensure both images have the same size.
+                # If sign_detection_result is 640x480 but lane_detection_result is larger, resize sign_detection_result.
+                if lane_detection_result.shape != sign_detection_result.shape:
+                    sign_detection_result = cv2.resize(sign_detection_result, (lane_detection_result.shape[1],
+                                                                                lane_detection_result.shape[0]))
+
+                # Blend both results together.
+                # Adjust the weights as needed (here, both are given equal weight).
+                combined_frame = cv2.addWeighted(lane_detection_result, 0.2,
+                                                sign_detection_result, 0.8, 0)
+                                
 
                 if self.recording == True:
-                    self.video_writer.write(mainRequest)
+                    self.video_writer.write(combined_frame)
 
                 serialRequest = cv2.cvtColor(serialRequest, cv2.COLOR_YUV2BGR_I420)
 
-                _, mainEncodedImg = cv2.imencode(".jpg", mainRequest)                   
-                _, serialEncodedImg = cv2.imencode(".jpg", serialRequest)
+                _, mainEncodedImg = cv2.imencode(".jpg", combined_frame)                   
+                _, serialEncodedImg = cv2.imencode(".jpg", combined_frame)
 
                 mainEncodedImageData = base64.b64encode(mainEncodedImg).decode("utf-8")
                 serialEncodedImageData = base64.b64encode(serialEncodedImg).decode("utf-8")
@@ -182,7 +223,7 @@ class threadCamera(ThreadWithStop):
         config = self.camera.create_preview_configuration(
             buffer_count=1,
             queue=False,
-            main={"format": "RGB888", "size": (2048, 1080)},
+            main={"format": "RGB888", "size": (640, 480)},
             lores={"size": (512, 270)},
             encode="lores",
         )

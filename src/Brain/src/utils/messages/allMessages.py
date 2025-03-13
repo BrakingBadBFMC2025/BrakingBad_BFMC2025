@@ -72,25 +72,6 @@ class Semaphores(Enum):
     msgID = 2
     msgType = "dict"
 
-################################# From Control ##################################
-class AutoSpeedMotor(Enum):
-    Queue = "Critical"
-    Owner = "Control"
-    msgID = 1
-    msgType = "str"
-
-class AutoSteerMotor(Enum):
-    Queue = "Critical"
-    Owner = "Control"
-    msgID = 2
-    msgType = "str"
-
-class Destination(Enum):
-    Queue = "General"
-    Owner = "Control"
-    msgID = 3
-    msgType = "dict"
-
 
 ################################# From CV ##################################
 class Trajectory_angle_rads(Enum):
@@ -98,6 +79,28 @@ class Trajectory_angle_rads(Enum):
     Owner = "CV"
     msgID = 1
     msgType = "float"
+
+class Sign(Enum):
+    Queue = "General"
+    Owner = "CV"
+    msgID = 2
+    msgType = "dict"
+
+################################# From Main ##################################
+class Main_Command(Enum):
+    Queue = "General"
+    Owner = "Main"
+    msgID = 1
+    msgType = "dict"
+
+
+################################# From Planner ##################################
+
+class Control_Command(Enum):
+    Queue = "General"
+    Owner = "Planner"
+    msgID = 1
+    msgType = "dict"
 
 ################################# From Dashboard ##################################
 class SpeedMotor(Enum):

@@ -16,11 +16,10 @@ class processControl(WorkerProcess):
         debugging (bool, optional): A flag for debugging. Defaults to False.
     """
 
-    def __init__(self, queueList, logging, debugging=False, auto = False):
+    def __init__(self, queueList, logging, debugging=False):
         self.queuesList = queueList
         self.logging = logging
         self.debugging = debugging
-        self.auto = auto
 
         super(processControl, self).__init__(self.queuesList)
 
@@ -37,6 +36,6 @@ class processControl(WorkerProcess):
     def _init_threads(self):
         """Create the Control Publisher thread and add to the list of threads."""
         ControlTh = threadControl(
-            self.queuesList, self.logging, self.debugging, self.auto
+            self.queuesList, self.logging, self.debugging
         )
         self.threads.append(ControlTh)

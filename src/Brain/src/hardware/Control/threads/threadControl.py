@@ -73,16 +73,18 @@ class threadControl(ThreadWithStop):
         debugging (bool, optional): A flag for debugging. Defaults to False.
     """
 
-    def __init__(self, queueList, logging, debugging=False, auto=False):
+
+    def __init__(self, queueList, logging, debugging=False):
         self.queuesList = queueList
         self.logging = logging
         self.debugging = debugging
-        self.auto = auto
-        self.controller = PID_control(MAX_SPEED, MAX_STEERING)
+        self.controller = PID_control(MAX_STEERING)
+
 
         self.f_kin = F_kin_ackerman() # TODO this is to be replaced after localization package is complete
 
         self.subscribe()
+
         super(threadControl, self).__init__()
 
     def run(self): 
@@ -96,9 +98,7 @@ class threadControl(ThreadWithStop):
         #waiting until engine starts before sending commands
         while(self.kl_sub.receive() is None):
             time.sleep(1)
-
-        
-        
+       
         time.sleep(1)
 
         x_curr=0
@@ -112,9 +112,13 @@ class threadControl(ThreadWithStop):
         x_destination =0 #in mm
         y_destination=0 #in mm
 
-        time_interval = 0.3 #in seconds
+        time_interval = 0.5 #in seconds
         vel =0 #in mm/s
         steer =0 #in degrees
+
+        control_type=2
+        arg1=0
+        arg2=0
 
         waiting =1 # 1 if the car is expecting new command
 
@@ -122,78 +126,126 @@ class threadControl(ThreadWithStop):
 
         while(self.is_alive): #until manual shut down
 
-            #checking if there is a new move given
-            #if yes then replace the old error and calc again
-            dest_dict = self.dest_sub.receive()
-            if(dest_dict is not None):
-                x_destination = int(dest_dict["x"])
-                y_destination = int(dest_dict["y"])
+            planner_command = self.planner_command_sub.receive()
 
-                #check if destination is reachable by car's model
-                if self.f_kin.move_validator(MAX_STEERING/10,x_destination,y_destination):
-                    msg = "Moving to :"+str(x_destination)+", "+str(y_destination)
-                    LOG(msg)
+            if planner_command is not None:
+                control_type = planner_command["type"]
+                arg1 = planner_command["arg1"]
+                arg2 = planner_command["arg2"]
 
-                    x_distance = x_destination
-                    y_distance = y_destination
-                    x_curr =0
-                    y_curr=0
-                    rot_curr=0
-                    rot_distance = math.degrees(math.atan2(x_distance, y_distance))
-                    waiting =0
-                else:
-                    LOG("WARNING: Unreachable move.")
-                    x_distance=0
-                    y_distance=0
-                    rot_distance =0
-                    self.brake_pub.send(0.0)
 
-            #if car is not at destination, execute movement
-            if not arrived(x_distance, y_distance):
-                msg = "Distances to target: x:" +str(x_distance) + ", y:"+ str(y_distance) + ", rot:" + str(rot_distance)
-                LOG(msg)
+            if control_type==2: #polar coords control
                 
-                #calculating needed vel and steer to reach position
-                vel, steer = self.controller.calc(x_distance, y_distance, rot_distance)
-                msg = "Calx: vel:" + str(vel) +", steer: " +str(steer)
-                LOG(msg)
-
-                #estimating expected displacement based on command
-                delta_x, delta_y, rot_curr = self.f_kin.get_deltas_from_commands(time_interval, vel, steer, rot_curr)
-
-                #updating distances (needed for the next loop of calculation) 
-                x_curr += delta_x
-                y_curr += delta_y
-
-                x_distance = x_destination - x_curr
-                y_distance = y_destination - y_curr
-                rot_distance = math.degrees(math.atan2(x_distance, y_distance)) - rot_curr
-
-                print("displacements: ",x_curr,y_curr,rot_curr)
-
-                #sending command
+                vel = arg1
+                rot_distance = arg2
+                
+                steer = self.controller.calc_steer_on_angledeg(rot_distance)
+                
                 parse_ctr_command(time_interval, vel, steer)
                 self.ctr_pub.send(ctr_command)
 
-                # this is to avoid extreme overshoot
-                if(x_distance<-arrival_threshold or y_distance<-arrival_threshold):
-                    x_distance=0
-                    y_distance=0
-                    rot_distance=0
-                    x_curr=0
-                    y_curr=0
-                    rot_curr=0
+                time.sleep(time_interval)
 
-                time.sleep(time_interval) #TODO is that good practice tho?
+            elif control_type==1: #eucl coods control
+                x = arg1
+                y = arg2
 
-            else:
-                if waiting ==0:
-                    x_curr=0
-                    y_curr=0
-                    rot_curr=0
-                    LOG("Expecting command...")
-                    waiting =1
+                LOG("N/A")
+                time.sleep(time_interval)
+                
+            """
+            if self.control_type==2:    #polar coords control 
+                
+                rot_distance = self.angle_sub.receive()
+                distance = self.dist_sub.receive()
+
+                if rot_distance is not None:
+                    msg = "Following orientation: " + str(rot_distance) + " for distance: "+str(distance)
+                    LOG(msg)
+
+                    steer = self.controller.calc_steer_on_angledeg(rot_distance)
+                    vel = self.controller.calc_speed_on_dist(distance, MAX_SPEED)
+
+                parse_ctr_command(time_interval, vel, steer)
+                self.ctr_pub.send(ctr_command)
+
+                time.sleep(time_interval)
+                
         
+            elif self.control_type==1:  #euledian coords control
+
+                #checking if there is a new move given
+                #if yes then replace the old error and calc again
+                dest_dict = self.dest_sub.receive()
+                if(dest_dict is not None):
+                    x_destination = int(dest_dict["x"])
+                    y_destination = int(dest_dict["y"])
+                    
+                    #check if destination is reachable by car's model
+                    if self.f_kin.move_validator(MAX_STEERING/10,x_destination,y_destination):
+                        msg = "Moving to :"+str(x_destination)+", "+str(y_destination)
+                        LOG(msg)
+
+                        x_distance = x_destination
+                        y_distance = y_destination
+                        x_curr =0
+                        y_curr=0
+                        rot_curr=0
+                        rot_distance = math.degrees(math.atan2(x_distance, y_distance))
+                        waiting =0
+                    else:
+                        LOG("WARNING: Unreachable move.")
+                        x_distance=0
+                        y_distance=0
+                        rot_distance =0
+                        self.brake_pub.send(0.0)
+
+                #if car is not at destination, execute movement
+                if not arrived(x_distance, y_distance):
+                    msg = "Distances to target: x:" +str(x_distance) + ", y:"+ str(y_distance) + ", rot:" + str(rot_distance)
+                    LOG(msg)
+                    
+                    #calculating needed vel and steer to reach position
+                    vel, steer = self.controller.calc(x_distance, y_distance, rot_distance, MAX_SPEED)
+                    msg = "Calx: vel:" + str(vel) +", steer: " +str(steer)
+                    LOG(msg)
+
+                    #estimating expected displacement based on command
+                    delta_x, delta_y, rot_curr = self.f_kin.get_deltas_from_commands(time_interval, vel, steer, rot_curr)
+
+                    #updating distances (needed for the next loop of calculation) 
+                    x_curr += delta_x
+                    y_curr += delta_y
+
+                    x_distance = x_destination - x_curr
+                    y_distance = y_destination - y_curr
+                    rot_distance = math.degrees(math.atan2(x_distance, y_distance)) - rot_curr
+
+                    print("displacements: ",x_curr,y_curr,rot_curr)
+
+                    #sending command
+                    parse_ctr_command(time_interval, vel, steer)
+                    self.ctr_pub.send(ctr_command)
+
+                    # this is to avoid extreme overshoot
+                    if(x_distance<-arrival_threshold or y_distance<-arrival_threshold):
+                        x_distance=0
+                        y_distance=0
+                        rot_distance=0
+                        x_curr=0
+                        y_curr=0
+                        rot_curr=0
+
+                    time.sleep(time_interval) #TODO is that good practice tho?
+
+                else:
+                    if waiting ==0:
+                        x_curr=0
+                        y_curr=0
+                        rot_curr=0
+                        LOG("Expecting command...")
+                        waiting =1
+            """
         if self.debugging:
             LOG("CONTROL THREAD EXITING")
         
@@ -202,16 +254,12 @@ class threadControl(ThreadWithStop):
     def subscribe(self):
         """Subscribes to the messages you are interested in"""
         self.kl_sub = messageHandlerSubscriber(self.queuesList, allMessages.Klem, "lastOnly", True)
-        self.trajectory_angle_sub = messageHandlerSubscriber(self.queuesList, allMessages.Trajectory_angle_rads, "lastOnly", True)
         self.imu_sub = messageHandlerSubscriber(self.queuesList, allMessages.ImuData, "lastOnly", True)
-        self.dest_sub = messageHandlerSubscriber(self.queuesList, allMessages.Destination, "lastOnly", True)
-
-
-        self.kl_pub= messageHandlerSender(self.queuesList, allMessages.Klem)
+        self.planner_command_sub = messageHandlerSubscriber(self.queuesList, allMessages.Control_Command, "lastOnly", True)
+        
         self.speed_pub = messageHandlerSender(self.queuesList, allMessages.SpeedMotor)
         self.steer_pub = messageHandlerSender(self.queuesList, allMessages.SteerMotor)
         self.brake_pub = messageHandlerSender(self.queuesList, allMessages.Brake)
         self.ctr_pub = messageHandlerSender(self.queuesList, allMessages.Control)
-
 
         pass

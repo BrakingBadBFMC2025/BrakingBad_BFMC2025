@@ -41,9 +41,7 @@ from src.utils.messages.allMessages import (
     ToggleBatteryLvl,
     ToggleImuData,
     ToggleInstant,
-    ToggleResourceMonitor,
-    AutoSpeedMotor,
-    AutoSteerMotor
+    ToggleResourceMonitor
 )
 from src.utils.messages.messageHandlerSubscriber import messageHandlerSubscriber
 from src.utils.messages.messageHandlerSender import messageHandlerSender
@@ -98,8 +96,6 @@ class threadWrite(ThreadWithStop):
         self.resourceMonitorSubscriber = messageHandlerSubscriber(self.queuesList, ToggleResourceMonitor, "lastOnly", True)
         self.imuSubscriber = messageHandlerSubscriber(self.queuesList, ToggleImuData, "lastOnly", True)
 
-        self.auto_steer_sub = messageHandlerSubscriber(self.queuesList, AutoSteerMotor, "fifo", True)
-        self.auto_speed_sub = messageHandlerSubscriber(self.queuesList, AutoSpeedMotor, "fifo", True)
     # ==================================== SENDING =======================================
 
     def sendToSerial(self, msg):
@@ -176,27 +172,12 @@ class threadWrite(ThreadWithStop):
                             command = {"action": "speed", "speed": int(speedRecv)}
                             self.sendToSerial(command)
 
-                        auto_speedRecv = self.auto_speed_sub.receive()
-                        if auto_speedRecv is not None:
-                            if self.debugger:
-                                self.logger.info(auto_speedRecv)
-                            command = {"action": "speed", "speed": int(auto_speedRecv)}
-                            self.sendToSerial(command)
-
                         steerRecv = self.steerMotorSubscriber.receive()
                         if steerRecv is not None:
                             if self.debugger:
                                 self.logger.info(steerRecv) 
                             command = {"action": "steer", "steerAngle": int(steerRecv)}
-                            self.sendToSerial(command)
-
-                        auto_steerRecv = self.auto_steer_sub.receive()
-                        if auto_steerRecv is not None:
-                            if self.debugger:
-                                self.logger.info(auto_steerRecv)
-                            command = {"action": "steer", "steerAngle": int(auto_steerRecv)}
-                            self.sendToSerial(command)
-                            
+                            self.sendToSerial(command)                            
 
                         controlRecv = self.controlSubscriber.receive()
                         if controlRecv is not None:

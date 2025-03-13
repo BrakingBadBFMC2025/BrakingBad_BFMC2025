@@ -61,8 +61,10 @@ from src.data.TrafficCommunication.processTrafficCommunication import processTra
 from src.utils.ipManager.IpReplacement import IPManager
 # ------ New component imports starts here ------#
 from src.utils.messages.messageHandlerSender import messageHandlerSender
+from src.utils.messages.messageHandlerSubscriber import messageHandlerSubscriber
 import src.utils.messages.allMessages as allMessages
 
+from src.Planner.Planner.processPlanner import processPlanner
 from src.hardware.Control.processControl import processControl
 from src.CV.CV.processCV import processCV
 from src.hardware.Localization.processLocalization import processLocalization
@@ -90,6 +92,7 @@ SerialHandler = True
 Control = True
 CV = False
 Localization = False
+Planner = True
 # ------ New component flags ends here ------#
 
 # ===================================== SETUP PROCESSES ==================================
@@ -133,13 +136,23 @@ if TrafficCommunication:
 
 
 # ------ New component runs starts here ------#
+control_type= "polar_coords"
+
+if Planner:
+    processPlanner = processPlanner(queueList, logging, debugging=True)
+    allProcesses.append(processPlanner)
+
 if Control:
-    processControl = processControl(queueList, logging, debugging=True, auto= not Dashboard)
+    processControl = processControl(queueList, logging, debugging=True)
     allProcesses.append(processControl)
 
+
 if CV:
-    processCV = processCV(queueList, logging, debugging=True)
-    allProcesses.append(processCV)
+    if Camera:
+        print("[main]: WPA\n")
+    else:
+        processCV = processCV(queueList, logging, debugging=True)
+        allProcesses.append(processCV)
 
 if Localization:
     processLocalization = processLocalization(queueList, logging, debugging=True)
@@ -171,20 +184,41 @@ c4_bomb = r"""
 print(c4_bomb)
 
 # ===================================== STAYING ALIVE ====================================
-#blocker = Event()
-dest_pub = messageHandlerSender(queueList, allMessages.Destination)
+kl_pub = messageHandlerSender(queueList, allMessages.Klem)
+main_command_pub = messageHandlerSender(queueList, allMessages.Main_Command)
+
 try:
     #blocker.wait()
+
+    if not Dashboard:
+        kl_pub.send("30")
+
+
     while(True):
-        x = input("set x: ")
-        y = input("set_y: ")
+        #send coordintes
+        if control_type=="eucl_coords":
+            x = input("set x: ")
+            y = input("set_y: ")
 
-        my_dict = {
-            "x": x,
-            "y": y
-        }
+            cmmnd_msg = {
+                "type": 1,
+                "arg1": x,
+                "arg2": y
+            }
 
-        dest_pub.send(my_dict)
+        #or send angle & speed 
+        elif control_type=="polar_coords":
+            angle = float(input("set angle: "))
+            dist = int(input("set distance: "))
+
+            cmmnd_msg = {
+                "type": 2,
+                "arg1": dist,
+                "arg2": angle
+            }
+
+        
+        main_command_pub.send(cmmnd_msg)
         time.sleep(1)
 
 except KeyboardInterrupt:
