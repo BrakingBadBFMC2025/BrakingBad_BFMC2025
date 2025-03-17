@@ -7,6 +7,7 @@ import argparse
 from ultralytics import YOLO
 
 def process_video(input_video, output_video, model_path="model_weights/best.pt", conf_threshold=0.5):
+    print(input_video, output_video, model_path, conf_threshold)
     # 1. Load the YOLO model
     model = YOLO(model_path)
 
@@ -17,8 +18,8 @@ def process_video(input_video, output_video, model_path="model_weights/best.pt",
         return
 
     # 3. Retrieve video properties for the output video writer
-    width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-    height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    width  = 640
+    height = 480
     fps    = cap.get(cv2.CAP_PROP_FPS)
 
     # Use a codec such as mp4v or XVID (adjust if necessary)
@@ -35,7 +36,7 @@ def process_video(input_video, output_video, model_path="model_weights/best.pt",
 
         # 4. Run YOLO detection on the frame
         start = time.time()
-        results = model(frame, conf=conf_threshold, imgsz=(320,320))
+        results = model(frame, conf=conf_threshold, imgsz=(width,height))
         inference_time = time.time() - start
         total_inference_time += inference_time
         frame_count += 1

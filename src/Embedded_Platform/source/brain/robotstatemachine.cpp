@@ -264,7 +264,7 @@ namespace brain{
 
         m_targetTime = time_deciseconds;
 
-        if(parsed == 3 && speed <= 500 && speed >= -500 && steer <= 232 && steer >= -232)
+        if(parsed == 3 && speed <= 500 && speed >= -500 && steer <= 250 && steer >= -250)
         {
             sprintf(response, "%d;%d;%d", speed, steer, time_deciseconds);
 

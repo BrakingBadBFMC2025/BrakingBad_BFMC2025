@@ -44,8 +44,9 @@ from src.utils.messages.allMessages import (
 from src.utils.messages.messageHandlerSender import messageHandlerSender
 from src.utils.messages.messageHandlerSubscriber import messageHandlerSubscriber
 from src.templates.threadwithstop import ThreadWithStop
-from src.hardware.camera.utils.swald import swaaald
+from src.hardware.camera.utils.lane_detector import lane_detector
 from src.hardware.camera.utils.yolo_sign_detection import SignDetector 
+
 
 
 
@@ -74,8 +75,9 @@ class threadCamera(ThreadWithStop):
 
         self.sign_pub = messageHandlerSender(self.queuesList, Sign)
 
-        self.sign_detector = SignDetector(model_path="/home/bb/Brain/src/hardware/camera/utils/best.pt", conf=0.5, device="cpu") #instance of the sign detector
-
+        self.sign_detector = SignDetector(model_path="/home/bb/Brain/src/CV/best.pt", conf=0.5, device="cpu") #instance of the sign detector
+        # self.sign_detector = SignDetector(model_path="/home/bb/Brain/src/CV/model_weights/best_ncnn_model/", conf=0.5, device="cpu") #instance of the sign detector
+        
         self.subscribe()
         self._init_camera()
         self.Queue_Sending()
@@ -158,12 +160,13 @@ class threadCamera(ThreadWithStop):
                 mainRequest = self.camera.capture_array("main")
                 serialRequest = self.camera.capture_array("lores")  # Will capture an array that can be used by OpenCV library
 
-                frame_bgr = cv2.cvtColor(mainRequest, cv2.COLOR_RGB2BGR)
-
+                # frame_bgr = cv2.cvtColor(mainRequest, cv2.COLOR_RGB2BGR)
+                frame_bgr = mainRequest
                 lane_frame = frame_bgr.copy()
                 sign_frame = frame_bgr.copy()
 
-                #lane_detection_result = swaaald(lane_frame)
+                #slope, roi_ld = lane_detector(lane_frame)
+                # lane_detection_result = roi_ld
                 lane_detection_result = lane_frame
 
                 # detect_sign() returns a list of detections and an annotated image.
@@ -182,7 +185,6 @@ class threadCamera(ThreadWithStop):
                 
 
                         
-                    
                 # Ensure both images have the same size.
                 # If sign_detection_result is 640x480 but lane_detection_result is larger, resize sign_detection_result.
                 if lane_detection_result.shape != sign_detection_result.shape:
@@ -192,7 +194,8 @@ class threadCamera(ThreadWithStop):
                 # Blend both results together.
                 # Adjust the weights as needed (here, both are given equal weight).
                 combined_frame = cv2.addWeighted(lane_detection_result, 0.2,
-                                                sign_detection_result, 0.8, 0)
+                                                 sign_detection_result, 0.8, 0)
+                #combined_frame = mainRequest
                                 
 
                 if self.recording == True:
@@ -201,7 +204,7 @@ class threadCamera(ThreadWithStop):
                 serialRequest = cv2.cvtColor(serialRequest, cv2.COLOR_YUV2BGR_I420)
 
                 _, mainEncodedImg = cv2.imencode(".jpg", combined_frame)                   
-                _, serialEncodedImg = cv2.imencode(".jpg", combined_frame)
+                _, serialEncodedImg = cv2.imencode(".jpg", mainRequest)
 
                 mainEncodedImageData = base64.b64encode(mainEncodedImg).decode("utf-8")
                 serialEncodedImageData = base64.b64encode(serialEncodedImg).decode("utf-8")

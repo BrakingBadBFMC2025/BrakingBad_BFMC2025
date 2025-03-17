@@ -1,4 +1,4 @@
-# Install script for directory: /home/maria/Documents/Embedded_Platform/mbed-os/connectivity/drivers/cellular/QUECTEL
+# Install script for directory: /home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/mbed-os/connectivity/drivers/cellular/QUECTEL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,33 +32,33 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "TRUE")
 endif()
 
-# Set default install directory permissions.
+# Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/arm-none-eabi-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/cellular/QUECTEL/BC95/cmake_install.cmake")
+  include("/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/cellular/QUECTEL/BC95/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/cellular/QUECTEL/BG96/cmake_install.cmake")
+  include("/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/cellular/QUECTEL/BG96/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/cellular/QUECTEL/EC2X/cmake_install.cmake")
+  include("/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/cellular/QUECTEL/EC2X/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/cellular/QUECTEL/M26/cmake_install.cmake")
+  include("/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/cellular/QUECTEL/M26/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/cellular/QUECTEL/UG96/cmake_install.cmake")
+  include("/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/cellular/QUECTEL/UG96/cmake_install.cmake")
 endif()
 

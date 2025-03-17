@@ -62,4 +62,6 @@ extern bool bool_globalsV_resource_isActive;
 extern bool bool_globalsV_ShuttedDown;
 extern bool bool_globalsV_warningFlag;
 
+extern bool bool_globalsV_encoder_isActive;
+
 #endif // GLOBALSV_HPP

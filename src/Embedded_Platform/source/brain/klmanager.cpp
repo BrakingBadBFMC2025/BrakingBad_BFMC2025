@@ -30,11 +30,12 @@
 
 #include "brain/klmanager.hpp"
 
-#define _25_chars 25
+#define _25_chars 250
 
 // TODO: Add your code here
 namespace brain
 {
+    
    /**
     * @brief Class constructorklmanager
     *
@@ -45,7 +46,8 @@ namespace brain
         periodics::CInstantConsumption& f_instant,
         periodics::CTotalVoltage& f_baterry,
         brain::CRobotStateMachine& f_robotStateMachine,
-        periodics::CResourcemonitor& f_resourceM
+        periodics::CResourcemonitor& f_resourceM,
+        periodics::CEncoders& f_encoders
     )
     : m_klvalue(0)
     , m_alerts(f_alerts)
@@ -54,6 +56,7 @@ namespace brain
     , m_baterry(f_baterry)
     , m_robotStateMachine(f_robotStateMachine)
     , m_resourceM(f_resourceM)
+    , m_encoders(f_encoders)
     {
         /* constructor behaviour */
     }
@@ -91,6 +94,10 @@ namespace brain
                     m_resourceM.serialCallbackRESMONCommand("0", response);
                     uint8_globalsV_value_of_kl = 0;
                     m_alerts.alertsCommand("3", response);
+
+
+                    m_encoders.serialCallbackEncoderCommand("0", response);
+                    ThisThread::sleep_for(chrono::milliseconds(50));
                 }
                 if((l_keyValue == 15 || l_keyValue == 30) && (uint8_globalsV_value_of_kl != 15)) 
                 {
@@ -102,7 +109,11 @@ namespace brain
                     if(!bool_globalsV_battery_isActive) m_baterry.serialCallbackTOTALVcommand("1", response);
                     if(!bool_globalsV_resource_isActive) m_resourceM.serialCallbackRESMONCommand("1", response);
                     m_alerts.alertsCommand("4", response);
+                    sprintf(b, "klmanager.cpp calling encoder command with active: %b\n", bool_globalsV_encoder_isActive);
+                    if(!bool_globalsV_encoder_isActive) m_encoders.serialCallbackEncoderCommand("1", response);
+
                 }
+
                 if(l_keyValue == 30 && (uint8_globalsV_value_of_kl != 30)){
                     sprintf(b,"%d",l_keyValue);
                     uint8_globalsV_value_of_kl = 30;

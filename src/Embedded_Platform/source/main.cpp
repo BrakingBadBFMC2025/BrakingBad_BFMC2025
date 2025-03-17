@@ -59,18 +59,26 @@ drivers::CSpeedingMotor g_speedingDriver(D3, -500, 500); //speed in cm/s
 //PIN for angle in servo degrees, inferior and superior limit
 drivers::CSteeringMotor g_steeringDriver(D4, -250, 250);
 
+
+/* USER NEW COMPONENT BEGIN */
+brain::CEkf g_ekf();
+drivers::CAs5600 g_as5600(PB_9, PB_8);
+
+periodics::CEncoders g_encoders(g_baseTick * 150, g_rpi, g_as5600, bool_globalsV_encoder_isActive);
+
+
 // Create the motion controller, which controls the robot states and the robot moves based on the transmitted command over the serial interface.
 brain::CRobotStateMachine g_robotstatemachine(g_baseTick * 50, g_rpi, g_steeringDriver, g_speedingDriver);
 
 periodics::CResourcemonitor g_resourceMonitor(g_baseTick * 5000, g_rpi);
 
-brain::CKlmanager g_klmanager(g_alerts, g_imu, g_instantconsumption, g_totalvoltage, g_robotstatemachine, g_resourceMonitor);
+brain::CKlmanager g_klmanager(g_alerts, g_imu, g_instantconsumption, g_totalvoltage, g_robotstatemachine, g_resourceMonitor, g_encoders);
 
 periodics::CPowermanager g_powermanager(g_baseTick * 100, g_klmanager, g_rpi, g_totalvoltage, g_instantconsumption, g_alerts);
 
 brain::CBatterymanager g_batteryManager(dummy_value);
 
-/* USER NEW COMPONENT BEGIN */
+
 
 /* USER NEW COMPONENT END */
 
@@ -85,7 +93,8 @@ drivers::CSerialMonitor::CSerialSubscriberMap g_serialMonitorSubscribers = {
     {"imu",            mbed::callback(&g_imu,               &periodics::CImu::serialCallbackIMUcommand)},
     {"kl",             mbed::callback(&g_klmanager,         &brain::CKlmanager::serialCallbackKLCommand)},
     {"batteryCapacity",mbed::callback(&g_batteryManager,    &brain::CBatterymanager::serialCallbackBATTERYCommand)},
-    {"resourceMonitor",mbed::callback(&g_resourceMonitor,   &periodics::CResourcemonitor::serialCallbackRESMONCommand),}
+    {"resourceMonitor",mbed::callback(&g_resourceMonitor,   &periodics::CResourcemonitor::serialCallbackRESMONCommand)},
+    {"encoder", mbed::callback(&g_encoders, &periodics::CEncoders::serialCallbackEncoderCommand)}
 };
 
 // Create the serial monitor object, which decodes, redirects the messages and transmits the responses.
@@ -103,6 +112,7 @@ utils::CTask* g_taskList[] = {
     &g_resourceMonitor,
     &g_alerts,
     // USER NEW PERIODICS BEGIN -
+    &g_encoders,
     
     // USER NEW PERIODICS END
 }; 

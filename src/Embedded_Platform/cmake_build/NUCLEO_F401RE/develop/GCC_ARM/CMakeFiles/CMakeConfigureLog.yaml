@@ -1,0 +1,769 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "mbed-os/tools/cmake/app.cmake:27 (enable_language)"
+      - "CMakeLists.txt:10 (include)"
+    message: |
+      The target system is: Generic -  - 
+      The host system is: Linux - 5.15.0-134-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "mbed-os/tools/cmake/app.cmake:27 (enable_language)"
+      - "CMakeLists.txt:10 (include)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /usr/bin/arm-none-eabi-gcc 
+      Build flags: -Wall;-Wextra;-Wno-unused-parameter;-Wno-missing-field-initializers;-fmessage-length=0;-fno-exceptions;-ffunction-sections;-fdata-sections;-funsigned-char;-fomit-frame-pointer;-g3;-mthumb;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=softfp
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libg.a(lib_a-exit.o): in function `exit':
+      /build/newlib-CVVEyx/newlib-3.3.0/build/arm-none-eabi/thumb/v7e-m+fp/softfp/newlib/libc/stdlib/../../../../../../../../newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "mbed-os/tools/cmake/app.cmake:27 (enable_language)"
+      - "CMakeLists.txt:10 (include)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/arm-none-eabi-gcc 
+      Build flags: -Wall;-Wextra;-Wno-unused-parameter;-Wno-missing-field-initializers;-fmessage-length=0;-fno-exceptions;-ffunction-sections;-fdata-sections;-funsigned-char;-fomit-frame-pointer;-g3;-mthumb;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=softfp
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/CMakeFiles/3.30.8/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "mbed-os/tools/cmake/app.cmake:27 (enable_language)"
+      - "CMakeLists.txt:10 (include)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/arm-none-eabi-g++ 
+      Build flags: -Wall;-Wextra;-Wno-unused-parameter;-Wno-missing-field-initializers;-fmessage-length=0;-fno-exceptions;-ffunction-sections;-fdata-sections;-funsigned-char;-fomit-frame-pointer;-g3;-mthumb;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=softfp
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libg.a(lib_a-exit.o): in function `exit':
+      /build/newlib-CVVEyx/newlib-3.3.0/build/arm-none-eabi/thumb/v7e-m+fp/softfp/newlib/libc/stdlib/../../../../../../../../newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "mbed-os/tools/cmake/app.cmake:27 (enable_language)"
+      - "CMakeLists.txt:10 (include)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/arm-none-eabi-g++ 
+      Build flags: -Wall;-Wextra;-Wno-unused-parameter;-Wno-missing-field-initializers;-fmessage-length=0;-fno-exceptions;-ffunction-sections;-fdata-sections;-funsigned-char;-fomit-frame-pointer;-g3;-mthumb;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=softfp
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/CMakeFiles/3.30.8/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1192 (message)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineASMCompiler.cmake:135 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "mbed-os/tools/cmake/app.cmake:27 (enable_language)"
+      - "CMakeLists.txt:10 (include)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (15:9-2019-q4-0ubuntu1) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]
+      Copyright (C) 2019 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "mbed-os/tools/cmake/app.cmake:27 (enable_language)"
+      - "CMakeLists.txt:10 (include)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/CMakeFiles/CMakeScratch/TryCompile-P4fwtD"
+      binary: "/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/CMakeFiles/CMakeScratch/TryCompile-P4fwtD"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -g3 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp"
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,--start-group -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys -Wl,--end-group -specs=nosys.specs -Wl,--cref"
+      CMAKE_MODULE_PATH: "/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/mbed-os/tools/cmake"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/CMakeFiles/CMakeScratch/TryCompile-P4fwtD'
+        
+        Run Build Command(s): /home/m1tsos/.local/bin/ninja -v cmTC_65367
+        [1/2] /usr/bin/arm-none-eabi-gcc   -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -g3 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp    -v -o CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj -c /usr/local/share/cmake-3.30/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/arm-none-eabi-gcc
+        Target: arm-none-eabi
+        Configured with: ../configure --build=x86_64-linux-gnu --prefix=/usr --includedir='/usr/lib/include' --mandir='/usr/lib/share/man' --infodir='/usr/lib/share/info' --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir='/usr/lib/lib/x86_64-linux-gnu' --libexecdir='/usr/lib/lib/x86_64-linux-gnu' --disable-maintainer-mode --disable-dependency-tracking --mandir=/usr/share/man --enable-languages=c,c++,lto --enable-multilib --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --enable-tls --build=x86_64-linux-gnu --target=arm-none-eabi --with-system-zlib --with-gnu-as --with-gnu-ld --with-pkgversion=15:9-2019-q4-0ubuntu1 --without-included-gettext --prefix=/usr/lib --infodir=/usr/share/doc/gcc-arm-none-eabi/info --htmldir=/usr/share/doc/gcc-arm-none-eabi/html --pdfdir=/usr/share/doc/gcc-arm-none-eabi/pdf --bindir=/usr/bin --libexecdir=/usr/lib --libdir=/usr/lib --disable-libstdc++-v3 --host=x86_64-linux-gnu --with-headers=no --without-newlib --with-multilib-list=rmprofile CFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' CPPFLAGS='-Wdate-time -D_FORTIFY_SOURCE=2' CXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' GCJFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' LDFLAGS='-Wl,-Bsymbolic-functions -Wl,-z,relro' OBJCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' OBJCXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' INHIBIT_LIBC_CFLAGS=-DUSE_TM_CLONE_REGISTRY=0 AR_FOR_TARGET=arm-none-eabi-ar AS_FOR_TARGET=arm-none-eabi-as LD_FOR_TARGET=arm-none-eabi-ld NM_FOR_TARGET=arm-none-eabi-nm OBJDUMP_FOR_TARGET=arm-none-eabi-objdump RANLIB_FOR_TARGET=arm-none-eabi-ranlib READELF_FOR_TARGET=arm-none-eabi-readelf STRIP_FOR_TARGET=arm-none-eabi-strip
+        Thread model: single
+        gcc version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (15:9-2019-q4-0ubuntu1) 
+        COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-v' '-o' 'CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj' '-c' '-march=armv7e-m+fp'
+         /usr/lib/gcc/arm-none-eabi/9.2.1/cc1 -quiet -v -imultilib thumb/v7e-m+fp/softfp -dD -D__USES_INITFINI__ /usr/local/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -march=armv7e-m+fp -auxbase-strip CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj -g3 -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -version -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -o /tmp/ccIAuc9W.s
+        GNU C17 (15:9-2019-q4-0ubuntu1) version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (arm-none-eabi)
+        	compiled by GNU C version 9.2.1 20200306, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/sys-include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/arm-none-eabi/9.2.1/include
+         /usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed
+         /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include
+        End of search list.
+        GNU C17 (15:9-2019-q4-0ubuntu1) version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (arm-none-eabi)
+        	compiled by GNU C version 9.2.1 20200306, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 66eaa5baf4e6721a1f372763dea5d447
+        COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-v' '-o' 'CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj' '-c' '-march=armv7e-m+fp'
+         /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/as -v -march=armv7e-m -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj /tmp/ccIAuc9W.s
+        GNU assembler version 2.34 (arm-none-eabi) using BFD version (2.34-4ubuntu1+13ubuntu1) 2.34
+        COMPILER_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-v' '-o' 'CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj' '-c' '-march=armv7e-m+fp'
+        [2/2] : && /usr/bin/arm-none-eabi-gcc -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -g3 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -Wl,--start-group -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys -Wl,--end-group -specs=nosys.specs -Wl,--cref -v CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj -o cmTC_65367   && :
+        Using built-in specs.
+        Reading specs from /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/nosys.specs
+        rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence
+        COLLECT_GCC=/usr/bin/arm-none-eabi-gcc
+        COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-none-eabi/9.2.1/lto-wrapper
+        Target: arm-none-eabi
+        Configured with: ../configure --build=x86_64-linux-gnu --prefix=/usr --includedir='/usr/lib/include' --mandir='/usr/lib/share/man' --infodir='/usr/lib/share/info' --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir='/usr/lib/lib/x86_64-linux-gnu' --libexecdir='/usr/lib/lib/x86_64-linux-gnu' --disable-maintainer-mode --disable-dependency-tracking --mandir=/usr/share/man --enable-languages=c,c++,lto --enable-multilib --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --enable-tls --build=x86_64-linux-gnu --target=arm-none-eabi --with-system-zlib --with-gnu-as --with-gnu-ld --with-pkgversion=15:9-2019-q4-0ubuntu1 --without-included-gettext --prefix=/usr/lib --infodir=/usr/share/doc/gcc-arm-none-eabi/info --htmldir=/usr/share/doc/gcc-arm-none-eabi/html --pdfdir=/usr/share/doc/gcc-arm-none-eabi/pdf --bindir=/usr/bin --libexecdir=/usr/lib --libdir=/usr/lib --disable-libstdc++-v3 --host=x86_64-linux-gnu --with-headers=no --without-newlib --with-multilib-list=rmprofile CFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' CPPFLAGS='-Wdate-time -D_FORTIFY_SOURCE=2' CXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' GCJFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' LDFLAGS='-Wl,-Bsymbolic-functions -Wl,-z,relro' OBJCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' OBJCXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' INHIBIT_LIBC_CFLAGS=-DUSE_TM_CLONE_REGISTRY=0 AR_FOR_TARGET=arm-none-eabi-ar AS_FOR_TARGET=arm-none-eabi-as LD_FOR_TARGET=arm-none-eabi-ld NM_FOR_TARGET=arm-none-eabi-nm OBJDUMP_FOR_TARGET=arm-none-eabi-objdump RANLIB_FOR_TARGET=arm-none-eabi-ranlib READELF_FOR_TARGET=arm-none-eabi-readelf STRIP_FOR_TARGET=arm-none-eabi-strip
+        Thread model: single
+        gcc version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (15:9-2019-q4-0ubuntu1) 
+        COMPILER_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-specs=nosys.specs' '-v' '-o' 'cmTC_65367' '-march=armv7e-m+fp'
+         /usr/lib/gcc/arm-none-eabi/9.2.1/collect2 -plugin /usr/lib/gcc/arm-none-eabi/9.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-none-eabi/9.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpu4DHg.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lg -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -X -o cmTC_65367 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o -L/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp -L/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp -L/usr/lib/gcc/arm-none-eabi/9.2.1 -L/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib --start-group -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys --end-group --cref CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj --start-group -lgcc -lg -lc --end-group --start-group -lgcc -lc -lnosys --end-group /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtn.o
+        
+        Cross Reference Table
+        
+        Symbol                                            File
+        _ITM_deregisterTMCloneTable                       /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+        _ITM_registerTMCloneTable                         /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+        __TMC_END__                                       /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+        __bss_end__                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        __bss_start__                                     /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        __call_exitprocs                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)
+        __deregister_frame_info                           /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+        __dso_handle                                      /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+        __fini_array_end                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)
+        __fini_array_start                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)
+        __init_array_end                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)
+        __init_array_start                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)
+        __libc_fini                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)
+        __libc_fini_array                                 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        __libc_init_array                                 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        __preinit_array_end                               /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)
+        __preinit_array_start                             /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)
+        __register_exitproc                               /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__atexit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-atexit.o)
+        __register_frame_info                             /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+        __stack                                           /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        _exit                                             /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a(_exit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)
+        _fini                                             /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)
+        _global_impure_ptr                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-impure.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__atexit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)
+        _impure_ptr                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-impure.o)
+        _init                                             /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)
+        _mainCRTStartup                                   /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        _stack_init                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        _start                                            /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        atexit                                            /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-atexit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        exit                                              /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        hardware_init_hook                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        info_sizeof_dptr                                  CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj
+        main                                              CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        memset                                            /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-memset.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        software_init_hook                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-specs=nosys.specs' '-v' '-o' 'cmTC_65367' '-march=armv7e-m+fp'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "mbed-os/tools/cmake/app.cmake:27 (enable_language)"
+      - "CMakeLists.txt:10 (include)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/arm-none-eabi/9.2.1/include]
+          add: [/usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed]
+          add: [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/9.2.1/include] ==> [/usr/lib/gcc/arm-none-eabi/9.2.1/include]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed] ==> [/usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include] ==> [/usr/lib/arm-none-eabi/include]
+        implicit include dirs: [/usr/lib/gcc/arm-none-eabi/9.2.1/include;/usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed;/usr/lib/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "mbed-os/tools/cmake/app.cmake:27 (enable_language)"
+      - "CMakeLists.txt:10 (include)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/CMakeFiles/CMakeScratch/TryCompile-P4fwtD']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/m1tsos/.local/bin/ninja -v cmTC_65367]
+        ignore line: [[1/2] /usr/bin/arm-none-eabi-gcc   -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -g3 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp    -v -o CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj -c /usr/local/share/cmake-3.30/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/arm-none-eabi-gcc]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: ../configure --build=x86_64-linux-gnu --prefix=/usr --includedir='/usr/lib/include' --mandir='/usr/lib/share/man' --infodir='/usr/lib/share/info' --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir='/usr/lib/lib/x86_64-linux-gnu' --libexecdir='/usr/lib/lib/x86_64-linux-gnu' --disable-maintainer-mode --disable-dependency-tracking --mandir=/usr/share/man --enable-languages=c,c++,lto --enable-multilib --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --enable-tls --build=x86_64-linux-gnu --target=arm-none-eabi --with-system-zlib --with-gnu-as --with-gnu-ld --with-pkgversion=15:9-2019-q4-0ubuntu1 --without-included-gettext --prefix=/usr/lib --infodir=/usr/share/doc/gcc-arm-none-eabi/info --htmldir=/usr/share/doc/gcc-arm-none-eabi/html --pdfdir=/usr/share/doc/gcc-arm-none-eabi/pdf --bindir=/usr/bin --libexecdir=/usr/lib --libdir=/usr/lib --disable-libstdc++-v3 --host=x86_64-linux-gnu --with-headers=no --without-newlib --with-multilib-list=rmprofile CFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' CPPFLAGS='-Wdate-time -D_FORTIFY_SOURCE=2' CXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' GCJFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' LDFLAGS='-Wl,-Bsymbolic-functions -Wl,-z,relro' OBJCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' OBJCXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' INHIBIT_LIBC_CFLAGS=-DUSE_TM_CLONE_REGISTRY=0 AR_FOR_TARGET=arm-none-eabi-ar AS_FOR_TARGET=arm-none-eabi-as LD_FOR_TARGET=arm-none-eabi-ld NM_FOR_TARGET=arm-none-eabi-nm OBJDUMP_FOR_TARGET=arm-none-eabi-objdump RANLIB_FOR_TARGET=arm-none-eabi-ranlib READELF_FOR_TARGET=arm-none-eabi-readelf STRIP_FOR_TARGET=arm-none-eabi-strip]
+        ignore line: [Thread model: single]
+        ignore line: [gcc version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (15:9-2019-q4-0ubuntu1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-v' '-o' 'CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj' '-c' '-march=armv7e-m+fp']
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/cc1 -quiet -v -imultilib thumb/v7e-m+fp/softfp -dD -D__USES_INITFINI__ /usr/local/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -march=armv7e-m+fp -auxbase-strip CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj -g3 -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -version -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -o /tmp/ccIAuc9W.s]
+        ignore line: [GNU C17 (15:9-2019-q4-0ubuntu1) version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 9.2.1 20200306  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/sys-include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/include]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (15:9-2019-q4-0ubuntu1) version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 9.2.1 20200306  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 66eaa5baf4e6721a1f372763dea5d447]
+        ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-v' '-o' 'CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj' '-c' '-march=armv7e-m+fp']
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/as -v -march=armv7e-m -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj /tmp/ccIAuc9W.s]
+        ignore line: [GNU assembler version 2.34 (arm-none-eabi) using BFD version (2.34-4ubuntu1+13ubuntu1) 2.34]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-v' '-o' 'CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj' '-c' '-march=armv7e-m+fp']
+        ignore line: [[2/2] : && /usr/bin/arm-none-eabi-gcc -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -g3 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -Wl --start-group -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys -Wl --end-group -specs=nosys.specs -Wl --cref -v CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj -o cmTC_65367   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/nosys.specs]
+        ignore line: [rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence]
+        ignore line: [COLLECT_GCC=/usr/bin/arm-none-eabi-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-none-eabi/9.2.1/lto-wrapper]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: ../configure --build=x86_64-linux-gnu --prefix=/usr --includedir='/usr/lib/include' --mandir='/usr/lib/share/man' --infodir='/usr/lib/share/info' --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir='/usr/lib/lib/x86_64-linux-gnu' --libexecdir='/usr/lib/lib/x86_64-linux-gnu' --disable-maintainer-mode --disable-dependency-tracking --mandir=/usr/share/man --enable-languages=c,c++,lto --enable-multilib --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --enable-tls --build=x86_64-linux-gnu --target=arm-none-eabi --with-system-zlib --with-gnu-as --with-gnu-ld --with-pkgversion=15:9-2019-q4-0ubuntu1 --without-included-gettext --prefix=/usr/lib --infodir=/usr/share/doc/gcc-arm-none-eabi/info --htmldir=/usr/share/doc/gcc-arm-none-eabi/html --pdfdir=/usr/share/doc/gcc-arm-none-eabi/pdf --bindir=/usr/bin --libexecdir=/usr/lib --libdir=/usr/lib --disable-libstdc++-v3 --host=x86_64-linux-gnu --with-headers=no --without-newlib --with-multilib-list=rmprofile CFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' CPPFLAGS='-Wdate-time -D_FORTIFY_SOURCE=2' CXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' GCJFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' LDFLAGS='-Wl,-Bsymbolic-functions -Wl,-z,relro' OBJCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' OBJCXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' INHIBIT_LIBC_CFLAGS=-DUSE_TM_CLONE_REGISTRY=0 AR_FOR_TARGET=arm-none-eabi-ar AS_FOR_TARGET=arm-none-eabi-as LD_FOR_TARGET=arm-none-eabi-ld NM_FOR_TARGET=arm-none-eabi-nm OBJDUMP_FOR_TARGET=arm-none-eabi-objdump RANLIB_FOR_TARGET=arm-none-eabi-ranlib READELF_FOR_TARGET=arm-none-eabi-readelf STRIP_FOR_TARGET=arm-none-eabi-strip]
+        ignore line: [Thread model: single]
+        ignore line: [gcc version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (15:9-2019-q4-0ubuntu1) ]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-specs=nosys.specs' '-v' '-o' 'cmTC_65367' '-march=armv7e-m+fp']
+        link line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/collect2 -plugin /usr/lib/gcc/arm-none-eabi/9.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-none-eabi/9.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpu4DHg.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lg -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -X -o cmTC_65367 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o -L/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp -L/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp -L/usr/lib/gcc/arm-none-eabi/9.2.1 -L/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib --start-group -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys --end-group --cref CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj --start-group -lgcc -lg -lc --end-group --start-group -lgcc -lc -lnosys --end-group /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtn.o]
+          arg [/usr/lib/gcc/arm-none-eabi/9.2.1/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib/gcc/arm-none-eabi/9.2.1/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib/gcc/arm-none-eabi/9.2.1/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccpu4DHg.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lg] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+          arg [-X] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_65367] ==> ignore
+          arg [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o] ==> obj [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o]
+          arg [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o] ==> obj [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o]
+          arg [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o] ==> obj [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+          arg [-L/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp] ==> dir [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp]
+          arg [-L/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp] ==> dir [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp]
+          arg [-L/usr/lib/gcc/arm-none-eabi/9.2.1] ==> dir [/usr/lib/gcc/arm-none-eabi/9.2.1]
+          arg [-L/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib] ==> dir [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib]
+          arg [--start-group] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lsupc++] ==> lib [supc++]
+          arg [-lm] ==> lib [m]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lnosys] ==> lib [nosys]
+          arg [--end-group] ==> ignore
+          arg [--cref] ==> ignore
+          arg [CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [--start-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lg] ==> lib [g]
+          arg [-lc] ==> lib [c]
+          arg [--end-group] ==> ignore
+          arg [--start-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lnosys] ==> lib [nosys]
+          arg [--end-group] ==> ignore
+          arg [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o] ==> obj [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o]
+          arg [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtn.o] ==> obj [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtn.o]
+        ignore line: []
+        ignore line: [Cross Reference Table]
+        ignore line: []
+        ignore line: [Symbol                                            File]
+        ignore line: [_ITM_deregisterTMCloneTable                       /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o]
+        ignore line: [_ITM_registerTMCloneTable                         /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o]
+        ignore line: [__TMC_END__                                       /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o]
+        ignore line: [__bss_end__                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [__bss_start__                                     /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [__call_exitprocs                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)]
+        ignore line: [__deregister_frame_info                           /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o]
+        ignore line: [__dso_handle                                      /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o]
+        ignore line: [__fini_array_end                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)]
+        ignore line: [__fini_array_start                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)]
+        ignore line: [__init_array_end                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)]
+        ignore line: [__init_array_start                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)]
+        ignore line: [__libc_fini                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)]
+        ignore line: [__libc_fini_array                                 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [__libc_init_array                                 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [__preinit_array_end                               /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)]
+        ignore line: [__preinit_array_start                             /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)]
+        ignore line: [__register_exitproc                               /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__atexit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-atexit.o)]
+        ignore line: [__register_frame_info                             /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o]
+        ignore line: [__stack                                           /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [_exit                                             /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a(_exit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)]
+        ignore line: [_fini                                             /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)]
+        ignore line: [_global_impure_ptr                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-impure.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__atexit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)]
+        ignore line: [_impure_ptr                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-impure.o)]
+        ignore line: [_init                                             /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)]
+        ignore line: [_mainCRTStartup                                   /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [_stack_init                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [_start                                            /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [atexit                                            /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-atexit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [exit                                              /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [hardware_init_hook                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [info_sizeof_dptr                                  CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [main                                              CMakeFiles/cmTC_65367.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [memset                                            /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-memset.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [software_init_hook                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-specs=nosys.specs' '-v' '-o' 'cmTC_65367' '-march=armv7e-m+fp']
+        ignore line: []
+        ignore line: []
+        collapse obj [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o] ==> [/usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp] ==> [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp]
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp] ==> [/usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/softfp]
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/9.2.1] ==> [/usr/lib/gcc/arm-none-eabi/9.2.1]
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib] ==> [/usr/lib/arm-none-eabi/lib]
+        implicit libs: [stdc++;supc++;m;c;gcc;nosys;gcc;g;c;gcc;c;nosys]
+        implicit objs: [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o;/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o;/usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o;/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o;/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtn.o]
+        implicit dirs: [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp;/usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/softfp;/usr/lib/gcc/arm-none-eabi/9.2.1;/usr/lib/arm-none-eabi/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "mbed-os/tools/cmake/app.cmake:27 (enable_language)"
+      - "CMakeLists.txt:10 (include)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/CMakeFiles/CMakeScratch/TryCompile-X4T0wC"
+      binary: "/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/CMakeFiles/CMakeScratch/TryCompile-X4T0wC"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -g3 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp"
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,--start-group -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys -Wl,--end-group -specs=nosys.specs -Wl,--cref"
+      CMAKE_MODULE_PATH: "/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/mbed-os/tools/cmake"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/CMakeFiles/CMakeScratch/TryCompile-X4T0wC'
+        
+        Run Build Command(s): /home/m1tsos/.local/bin/ninja -v cmTC_894ce
+        [1/2] /usr/bin/arm-none-eabi-g++   -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -g3 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp    -v -o CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/local/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/arm-none-eabi-g++
+        Target: arm-none-eabi
+        Configured with: ../configure --build=x86_64-linux-gnu --prefix=/usr --includedir='/usr/lib/include' --mandir='/usr/lib/share/man' --infodir='/usr/lib/share/info' --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir='/usr/lib/lib/x86_64-linux-gnu' --libexecdir='/usr/lib/lib/x86_64-linux-gnu' --disable-maintainer-mode --disable-dependency-tracking --mandir=/usr/share/man --enable-languages=c,c++,lto --enable-multilib --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --enable-tls --build=x86_64-linux-gnu --target=arm-none-eabi --with-system-zlib --with-gnu-as --with-gnu-ld --with-pkgversion=15:9-2019-q4-0ubuntu1 --without-included-gettext --prefix=/usr/lib --infodir=/usr/share/doc/gcc-arm-none-eabi/info --htmldir=/usr/share/doc/gcc-arm-none-eabi/html --pdfdir=/usr/share/doc/gcc-arm-none-eabi/pdf --bindir=/usr/bin --libexecdir=/usr/lib --libdir=/usr/lib --disable-libstdc++-v3 --host=x86_64-linux-gnu --with-headers=no --without-newlib --with-multilib-list=rmprofile CFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' CPPFLAGS='-Wdate-time -D_FORTIFY_SOURCE=2' CXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' GCJFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' LDFLAGS='-Wl,-Bsymbolic-functions -Wl,-z,relro' OBJCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' OBJCXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' INHIBIT_LIBC_CFLAGS=-DUSE_TM_CLONE_REGISTRY=0 AR_FOR_TARGET=arm-none-eabi-ar AS_FOR_TARGET=arm-none-eabi-as LD_FOR_TARGET=arm-none-eabi-ld NM_FOR_TARGET=arm-none-eabi-nm OBJDUMP_FOR_TARGET=arm-none-eabi-objdump RANLIB_FOR_TARGET=arm-none-eabi-ranlib READELF_FOR_TARGET=arm-none-eabi-readelf STRIP_FOR_TARGET=arm-none-eabi-strip
+        Thread model: single
+        gcc version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (15:9-2019-q4-0ubuntu1) 
+        COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-v' '-o' 'CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=armv7e-m+fp'
+         /usr/lib/gcc/arm-none-eabi/9.2.1/cc1plus -quiet -v -imultilib thumb/v7e-m+fp/softfp -dD -D__USES_INITFINI__ /usr/local/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -march=armv7e-m+fp -auxbase-strip CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj -g3 -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -version -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -o /tmp/ccuFIa72.s
+        GNU C++14 (15:9-2019-q4-0ubuntu1) version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (arm-none-eabi)
+        	compiled by GNU C version 9.2.1 20200306, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/sys-include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include/c++/9.2.1
+         /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include/c++/9.2.1/arm-none-eabi/thumb/v7e-m+fp/softfp
+         /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include/c++/9.2.1/backward
+         /usr/lib/gcc/arm-none-eabi/9.2.1/include
+         /usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed
+         /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include
+        End of search list.
+        GNU C++14 (15:9-2019-q4-0ubuntu1) version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (arm-none-eabi)
+        	compiled by GNU C version 9.2.1 20200306, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 436e93aa8fa680a3cfe96e9899888e8f
+        COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-v' '-o' 'CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=armv7e-m+fp'
+         /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/as -v -march=armv7e-m -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccuFIa72.s
+        GNU assembler version 2.34 (arm-none-eabi) using BFD version (2.34-4ubuntu1+13ubuntu1) 2.34
+        COMPILER_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-v' '-o' 'CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=armv7e-m+fp'
+        [2/2] : && /usr/bin/arm-none-eabi-g++ -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -g3 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -Wl,--start-group -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys -Wl,--end-group -specs=nosys.specs -Wl,--cref -v CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_894ce   && :
+        Using built-in specs.
+        Reading specs from /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/nosys.specs
+        rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence
+        COLLECT_GCC=/usr/bin/arm-none-eabi-g++
+        COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-none-eabi/9.2.1/lto-wrapper
+        Target: arm-none-eabi
+        Configured with: ../configure --build=x86_64-linux-gnu --prefix=/usr --includedir='/usr/lib/include' --mandir='/usr/lib/share/man' --infodir='/usr/lib/share/info' --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir='/usr/lib/lib/x86_64-linux-gnu' --libexecdir='/usr/lib/lib/x86_64-linux-gnu' --disable-maintainer-mode --disable-dependency-tracking --mandir=/usr/share/man --enable-languages=c,c++,lto --enable-multilib --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --enable-tls --build=x86_64-linux-gnu --target=arm-none-eabi --with-system-zlib --with-gnu-as --with-gnu-ld --with-pkgversion=15:9-2019-q4-0ubuntu1 --without-included-gettext --prefix=/usr/lib --infodir=/usr/share/doc/gcc-arm-none-eabi/info --htmldir=/usr/share/doc/gcc-arm-none-eabi/html --pdfdir=/usr/share/doc/gcc-arm-none-eabi/pdf --bindir=/usr/bin --libexecdir=/usr/lib --libdir=/usr/lib --disable-libstdc++-v3 --host=x86_64-linux-gnu --with-headers=no --without-newlib --with-multilib-list=rmprofile CFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' CPPFLAGS='-Wdate-time -D_FORTIFY_SOURCE=2' CXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' GCJFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' LDFLAGS='-Wl,-Bsymbolic-functions -Wl,-z,relro' OBJCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' OBJCXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' INHIBIT_LIBC_CFLAGS=-DUSE_TM_CLONE_REGISTRY=0 AR_FOR_TARGET=arm-none-eabi-ar AS_FOR_TARGET=arm-none-eabi-as LD_FOR_TARGET=arm-none-eabi-ld NM_FOR_TARGET=arm-none-eabi-nm OBJDUMP_FOR_TARGET=arm-none-eabi-objdump RANLIB_FOR_TARGET=arm-none-eabi-ranlib READELF_FOR_TARGET=arm-none-eabi-readelf STRIP_FOR_TARGET=arm-none-eabi-strip
+        Thread model: single
+        gcc version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (15:9-2019-q4-0ubuntu1) 
+        COMPILER_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-specs=nosys.specs' '-v' '-o' 'cmTC_894ce' '-march=armv7e-m+fp'
+         /usr/lib/gcc/arm-none-eabi/9.2.1/collect2 -plugin /usr/lib/gcc/arm-none-eabi/9.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-none-eabi/9.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccl7gqDj.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lg -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -X -o cmTC_894ce /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o -L/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp -L/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp -L/usr/lib/gcc/arm-none-eabi/9.2.1 -L/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib --start-group -lstdc++ -lsupc++ -lgcc -lnosys --end-group --cref CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lc --start-group -lgcc -lg -lc --end-group --start-group -lgcc -lc -lnosys --end-group /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtn.o
+        
+        Cross Reference Table
+        
+        Symbol                                            File
+        _ITM_deregisterTMCloneTable                       /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+        _ITM_registerTMCloneTable                         /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+        __TMC_END__                                       /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+        __bss_end__                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        __bss_start__                                     /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        __call_exitprocs                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)
+        __deregister_frame_info                           /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+        __dso_handle                                      /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+        __fini_array_end                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)
+        __fini_array_start                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)
+        __init_array_end                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)
+        __init_array_start                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)
+        __libc_fini                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)
+        __libc_fini_array                                 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        __libc_init_array                                 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        __preinit_array_end                               /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)
+        __preinit_array_start                             /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)
+        __register_exitproc                               /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__atexit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-atexit.o)
+        __register_frame_info                             /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o
+        __stack                                           /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        _exit                                             /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a(_exit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)
+        _fini                                             /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)
+        _global_impure_ptr                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-impure.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__atexit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)
+        _impure_ptr                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-impure.o)
+        _init                                             /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)
+        _mainCRTStartup                                   /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        _stack_init                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        _start                                            /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        atexit                                            /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-atexit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        exit                                              /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        hardware_init_hook                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        main                                              CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        memset                                            /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-memset.o)
+                                                          /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        software_init_hook                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+        COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-specs=nosys.specs' '-v' '-o' 'cmTC_894ce' '-march=armv7e-m+fp'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "mbed-os/tools/cmake/app.cmake:27 (enable_language)"
+      - "CMakeLists.txt:10 (include)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include/c++/9.2.1]
+          add: [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include/c++/9.2.1/arm-none-eabi/thumb/v7e-m+fp/softfp]
+          add: [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include/c++/9.2.1/backward]
+          add: [/usr/lib/gcc/arm-none-eabi/9.2.1/include]
+          add: [/usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed]
+          add: [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include/c++/9.2.1] ==> [/usr/lib/arm-none-eabi/include/c++/9.2.1]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include/c++/9.2.1/arm-none-eabi/thumb/v7e-m+fp/softfp] ==> [/usr/lib/arm-none-eabi/include/c++/9.2.1/arm-none-eabi/thumb/v7e-m+fp/softfp]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include/c++/9.2.1/backward] ==> [/usr/lib/arm-none-eabi/include/c++/9.2.1/backward]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/9.2.1/include] ==> [/usr/lib/gcc/arm-none-eabi/9.2.1/include]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed] ==> [/usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include] ==> [/usr/lib/arm-none-eabi/include]
+        implicit include dirs: [/usr/lib/arm-none-eabi/include/c++/9.2.1;/usr/lib/arm-none-eabi/include/c++/9.2.1/arm-none-eabi/thumb/v7e-m+fp/softfp;/usr/lib/arm-none-eabi/include/c++/9.2.1/backward;/usr/lib/gcc/arm-none-eabi/9.2.1/include;/usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed;/usr/lib/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "mbed-os/tools/cmake/app.cmake:27 (enable_language)"
+      - "CMakeLists.txt:10 (include)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/CMakeFiles/CMakeScratch/TryCompile-X4T0wC']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/m1tsos/.local/bin/ninja -v cmTC_894ce]
+        ignore line: [[1/2] /usr/bin/arm-none-eabi-g++   -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -g3 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp    -v -o CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/local/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/arm-none-eabi-g++]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: ../configure --build=x86_64-linux-gnu --prefix=/usr --includedir='/usr/lib/include' --mandir='/usr/lib/share/man' --infodir='/usr/lib/share/info' --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir='/usr/lib/lib/x86_64-linux-gnu' --libexecdir='/usr/lib/lib/x86_64-linux-gnu' --disable-maintainer-mode --disable-dependency-tracking --mandir=/usr/share/man --enable-languages=c,c++,lto --enable-multilib --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --enable-tls --build=x86_64-linux-gnu --target=arm-none-eabi --with-system-zlib --with-gnu-as --with-gnu-ld --with-pkgversion=15:9-2019-q4-0ubuntu1 --without-included-gettext --prefix=/usr/lib --infodir=/usr/share/doc/gcc-arm-none-eabi/info --htmldir=/usr/share/doc/gcc-arm-none-eabi/html --pdfdir=/usr/share/doc/gcc-arm-none-eabi/pdf --bindir=/usr/bin --libexecdir=/usr/lib --libdir=/usr/lib --disable-libstdc++-v3 --host=x86_64-linux-gnu --with-headers=no --without-newlib --with-multilib-list=rmprofile CFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' CPPFLAGS='-Wdate-time -D_FORTIFY_SOURCE=2' CXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' GCJFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' LDFLAGS='-Wl,-Bsymbolic-functions -Wl,-z,relro' OBJCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' OBJCXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' INHIBIT_LIBC_CFLAGS=-DUSE_TM_CLONE_REGISTRY=0 AR_FOR_TARGET=arm-none-eabi-ar AS_FOR_TARGET=arm-none-eabi-as LD_FOR_TARGET=arm-none-eabi-ld NM_FOR_TARGET=arm-none-eabi-nm OBJDUMP_FOR_TARGET=arm-none-eabi-objdump RANLIB_FOR_TARGET=arm-none-eabi-ranlib READELF_FOR_TARGET=arm-none-eabi-readelf STRIP_FOR_TARGET=arm-none-eabi-strip]
+        ignore line: [Thread model: single]
+        ignore line: [gcc version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (15:9-2019-q4-0ubuntu1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-v' '-o' 'CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=armv7e-m+fp']
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/cc1plus -quiet -v -imultilib thumb/v7e-m+fp/softfp -dD -D__USES_INITFINI__ /usr/local/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -march=armv7e-m+fp -auxbase-strip CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj -g3 -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -version -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -o /tmp/ccuFIa72.s]
+        ignore line: [GNU C++14 (15:9-2019-q4-0ubuntu1) version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 9.2.1 20200306  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/sys-include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include/c++/9.2.1]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include/c++/9.2.1/arm-none-eabi/thumb/v7e-m+fp/softfp]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include/c++/9.2.1/backward]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/include]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++14 (15:9-2019-q4-0ubuntu1) version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 9.2.1 20200306  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 436e93aa8fa680a3cfe96e9899888e8f]
+        ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-v' '-o' 'CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=armv7e-m+fp']
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/as -v -march=armv7e-m -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccuFIa72.s]
+        ignore line: [GNU assembler version 2.34 (arm-none-eabi) using BFD version (2.34-4ubuntu1+13ubuntu1) 2.34]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-v' '-o' 'CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=armv7e-m+fp']
+        ignore line: [[2/2] : && /usr/bin/arm-none-eabi-g++ -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -g3 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -Wl --start-group -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys -Wl --end-group -specs=nosys.specs -Wl --cref -v CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_894ce   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/nosys.specs]
+        ignore line: [rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence]
+        ignore line: [COLLECT_GCC=/usr/bin/arm-none-eabi-g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-none-eabi/9.2.1/lto-wrapper]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: ../configure --build=x86_64-linux-gnu --prefix=/usr --includedir='/usr/lib/include' --mandir='/usr/lib/share/man' --infodir='/usr/lib/share/info' --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir='/usr/lib/lib/x86_64-linux-gnu' --libexecdir='/usr/lib/lib/x86_64-linux-gnu' --disable-maintainer-mode --disable-dependency-tracking --mandir=/usr/share/man --enable-languages=c,c++,lto --enable-multilib --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --enable-tls --build=x86_64-linux-gnu --target=arm-none-eabi --with-system-zlib --with-gnu-as --with-gnu-ld --with-pkgversion=15:9-2019-q4-0ubuntu1 --without-included-gettext --prefix=/usr/lib --infodir=/usr/share/doc/gcc-arm-none-eabi/info --htmldir=/usr/share/doc/gcc-arm-none-eabi/html --pdfdir=/usr/share/doc/gcc-arm-none-eabi/pdf --bindir=/usr/bin --libexecdir=/usr/lib --libdir=/usr/lib --disable-libstdc++-v3 --host=x86_64-linux-gnu --with-headers=no --without-newlib --with-multilib-list=rmprofile CFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' CPPFLAGS='-Wdate-time -D_FORTIFY_SOURCE=2' CXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' FFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' GCJFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' LDFLAGS='-Wl,-Bsymbolic-functions -Wl,-z,relro' OBJCFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' OBJCXXFLAGS='-g -O2 -fdebug-prefix-map=/build/gcc-arm-none-eabi-Gl9kT9/gcc-arm-none-eabi-9-2019-q4=. -fstack-protector-strong' INHIBIT_LIBC_CFLAGS=-DUSE_TM_CLONE_REGISTRY=0 AR_FOR_TARGET=arm-none-eabi-ar AS_FOR_TARGET=arm-none-eabi-as LD_FOR_TARGET=arm-none-eabi-ld NM_FOR_TARGET=arm-none-eabi-nm OBJDUMP_FOR_TARGET=arm-none-eabi-objdump RANLIB_FOR_TARGET=arm-none-eabi-ranlib READELF_FOR_TARGET=arm-none-eabi-readelf STRIP_FOR_TARGET=arm-none-eabi-strip]
+        ignore line: [Thread model: single]
+        ignore line: [gcc version 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599] (15:9-2019-q4-0ubuntu1) ]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/:/usr/lib/gcc/arm-none-eabi/9.2.1/:/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-specs=nosys.specs' '-v' '-o' 'cmTC_894ce' '-march=armv7e-m+fp']
+        link line: [ /usr/lib/gcc/arm-none-eabi/9.2.1/collect2 -plugin /usr/lib/gcc/arm-none-eabi/9.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-none-eabi/9.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccl7gqDj.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lg -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -X -o cmTC_894ce /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o -L/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp -L/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp -L/usr/lib/gcc/arm-none-eabi/9.2.1 -L/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib --start-group -lstdc++ -lsupc++ -lgcc -lnosys --end-group --cref CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lc --start-group -lgcc -lg -lc --end-group --start-group -lgcc -lc -lnosys --end-group /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtn.o]
+          arg [/usr/lib/gcc/arm-none-eabi/9.2.1/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib/gcc/arm-none-eabi/9.2.1/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib/gcc/arm-none-eabi/9.2.1/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccl7gqDj.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lg] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+          arg [-X] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_894ce] ==> ignore
+          arg [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o] ==> obj [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o]
+          arg [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o] ==> obj [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o]
+          arg [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o] ==> obj [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+          arg [-L/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp] ==> dir [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp]
+          arg [-L/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp] ==> dir [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp]
+          arg [-L/usr/lib/gcc/arm-none-eabi/9.2.1] ==> dir [/usr/lib/gcc/arm-none-eabi/9.2.1]
+          arg [-L/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib] ==> dir [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib]
+          arg [--start-group] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lsupc++] ==> lib [supc++]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lnosys] ==> lib [nosys]
+          arg [--end-group] ==> ignore
+          arg [--cref] ==> ignore
+          arg [CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lc] ==> lib [c]
+          arg [--start-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lg] ==> lib [g]
+          arg [-lc] ==> lib [c]
+          arg [--end-group] ==> ignore
+          arg [--start-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lnosys] ==> lib [nosys]
+          arg [--end-group] ==> ignore
+          arg [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o] ==> obj [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o]
+          arg [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtn.o] ==> obj [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtn.o]
+        ignore line: []
+        ignore line: [Cross Reference Table]
+        ignore line: []
+        ignore line: [Symbol                                            File]
+        ignore line: [_ITM_deregisterTMCloneTable                       /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o]
+        ignore line: [_ITM_registerTMCloneTable                         /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o]
+        ignore line: [__TMC_END__                                       /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o]
+        ignore line: [__bss_end__                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [__bss_start__                                     /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [__call_exitprocs                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)]
+        ignore line: [__deregister_frame_info                           /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o]
+        ignore line: [__dso_handle                                      /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o]
+        ignore line: [__fini_array_end                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)]
+        ignore line: [__fini_array_start                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)]
+        ignore line: [__init_array_end                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)]
+        ignore line: [__init_array_start                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)]
+        ignore line: [__libc_fini                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)]
+        ignore line: [__libc_fini_array                                 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [__libc_init_array                                 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [__preinit_array_end                               /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)]
+        ignore line: [__preinit_array_start                             /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)]
+        ignore line: [__register_exitproc                               /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__atexit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-atexit.o)]
+        ignore line: [__register_frame_info                             /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o]
+        ignore line: [__stack                                           /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [_exit                                             /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a(_exit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)]
+        ignore line: [_fini                                             /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-fini.o)]
+        ignore line: [_global_impure_ptr                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-impure.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__atexit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)]
+        ignore line: [_impure_ptr                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-impure.o)]
+        ignore line: [_init                                             /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-init.o)]
+        ignore line: [_mainCRTStartup                                   /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [_stack_init                                       /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [_start                                            /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [atexit                                            /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-atexit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-__call_atexit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [exit                                              /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-exit.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [hardware_init_hook                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [main                                              CMakeFiles/cmTC_894ce.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [memset                                            /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(lib_a-memset.o)]
+        ignore line: [                                                  /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [software_init_hook                                /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-fomit-frame-pointer' '-g3' '-mthumb' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=softfp' '-specs=nosys.specs' '-v' '-o' 'cmTC_894ce' '-march=armv7e-m+fp']
+        ignore line: []
+        ignore line: []
+        collapse obj [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o] ==> [/usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o]
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp] ==> [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp]
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp] ==> [/usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/softfp]
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/9.2.1] ==> [/usr/lib/gcc/arm-none-eabi/9.2.1]
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib] ==> [/usr/lib/arm-none-eabi/lib]
+        implicit libs: [stdc++;supc++;gcc;nosys;stdc++;m;c;gcc;g;c;gcc;c;nosys]
+        implicit objs: [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crti.o;/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtbegin.o;/usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o;/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtend.o;/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp/crtn.o]
+        implicit dirs: [/usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/softfp;/usr/lib/arm-none-eabi/lib/thumb/v7e-m+fp/softfp;/usr/lib/gcc/arm-none-eabi/9.2.1;/usr/lib/arm-none-eabi/lib]
+        implicit fwks: []
+      
+      
+...

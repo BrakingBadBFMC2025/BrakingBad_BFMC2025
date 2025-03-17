@@ -89,7 +89,7 @@ TrafficCommunication = False
 SerialHandler = True
 
 # ------ New component flags starts here ------#
-Control = True
+Control = False
 CV = False
 Localization = False
 Planner = True

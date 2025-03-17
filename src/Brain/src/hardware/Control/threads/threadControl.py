@@ -11,7 +11,7 @@ import math
 import ast
 
 MAX_STEERING = 250
-MAX_SPEED = 100
+MAX_SPEED = 500
 
 Kp_steer = 0.704000
 Kd_steer = 0.010422
@@ -143,6 +143,7 @@ class threadControl(ThreadWithStop):
                 
                 parse_ctr_command(time_interval, vel, steer)
                 self.ctr_pub.send(ctr_command)
+                LOG(ctr_command)
 
                 time.sleep(time_interval)
 

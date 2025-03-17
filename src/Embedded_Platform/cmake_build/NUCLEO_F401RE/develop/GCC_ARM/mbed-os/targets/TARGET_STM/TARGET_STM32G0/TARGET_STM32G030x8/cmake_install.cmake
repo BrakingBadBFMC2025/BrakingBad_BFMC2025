@@ -1,4 +1,4 @@
-# Install script for directory: /home/maria/Documents/Embedded_Platform/mbed-os/targets/TARGET_STM/TARGET_STM32G0/TARGET_STM32G030x8
+# Install script for directory: /home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/mbed-os/targets/TARGET_STM/TARGET_STM32G0/TARGET_STM32G030x8
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,7 +32,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "TRUE")
 endif()
 
-# Set default install directory permissions.
+# Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/arm-none-eabi-objdump")
 endif()

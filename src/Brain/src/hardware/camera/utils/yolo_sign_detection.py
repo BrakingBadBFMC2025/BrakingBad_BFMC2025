@@ -7,9 +7,9 @@ import numpy as np
 class SignDetector:
     def __init__(self, model_path="/home/bb/Brain/src/hardware/camera/utils/best.pt", conf=0.5, device="cpu"):
         # Real-world sign dimensions (in cm)
-        self.DEFAULT_SIGN_WIDTH = 4.6
-        self.DEFAULT_SIGN_HEIGHT = 4.6
-        self.HIGHWAY_SIGN_WIDTH = 3.0 
+        self.DEFAULT_SIGN_WIDTH = 6
+        self.DEFAULT_SIGN_HEIGHT = 6
+        self.HIGHWAY_SIGN_WIDTH = 4.2 
 
         # Camera calibration parameters for a Logitech webcam
         self.camera_matrix = np.array([[520.01502575, 0., 313.49750048],
@@ -19,7 +19,7 @@ class SignDetector:
         
         # Load the YOLO model and set the device
         self.model = YOLO(model_path)
-        self.model.to(device)
+        # self.model.to(device)
         self.conf = conf
 
     @staticmethod
@@ -121,6 +121,8 @@ class SignDetector:
         result = self.model(resized_img, conf=self.conf, verbose=False)[0]  
         detections = []
 
+ 
+
         if result.boxes is not None and len(result.boxes.xyxy) > 0:
             for i in range(len(result.boxes.xyxy)):
                 # Extract bounding box coordinates in the 640x480 image space
@@ -128,6 +130,7 @@ class SignDetector:
                 conf = float(result.boxes.conf[i])
                 cls_id = int(result.boxes.cls[i])
                 label = self.model.names[cls_id]
+
 
                 x1 = int(x1_res)
                 y1 = int(y1_res)
@@ -138,6 +141,7 @@ class SignDetector:
                 roi = resized_img[y1:y2, x1:x2]
                 pixel_width = x2 - x1
                 pixel_height = y2 - y1
+
 
                 if "Highway" in label:
                     sign_width = self.HIGHWAY_SIGN_WIDTH
@@ -259,7 +263,7 @@ def main():
         if writer:
             writer.write(processed_frame)
         else:
-            cv2.imshow("USB Camera YOLO Detection", processed_frame)
+            # cv2.imshow("USB Camera YOLO Detection", processed_frame)
             # Press 'q' to exit live stream mode
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 print(f"Quitting live display. Processed {frame_count} frames.")

@@ -41,6 +41,7 @@
 #include <periodics/totalvoltage.hpp>
 #include <brain/robotstatemachine.hpp>
 #include <periodics/resourcemonitor.hpp>
+#include <periodics/encoders.hpp>
 #include <brain/globalsv.hpp>
 #include <stdlib.h>
 
@@ -57,10 +58,12 @@ namespace brain
             CKlmanager(
                 periodics::CAlerts& f_alerts,
                 periodics::CImu& f_imu,
+
                 periodics::CInstantConsumption& f_instant,
                 periodics::CTotalVoltage& f_baterry,
                 brain::CRobotStateMachine& f_robotStateMachine,
-                periodics::CResourcemonitor& f_resourceM
+                periodics::CResourcemonitor& f_resourceM,
+                periodics::CEncoders& f_encoders // Pass by reference
             );
             /* Destructor */
             ~CKlmanager();
@@ -77,6 +80,8 @@ namespace brain
             periodics::CTotalVoltage& m_baterry;
             brain::CRobotStateMachine& m_robotStateMachine;
             periodics::CResourcemonitor& m_resourceM;
+            periodics::CEncoders& m_encoders; // Store reference instead of copy
+
 
     }; // class CKlmanager
 }; // namespace brain

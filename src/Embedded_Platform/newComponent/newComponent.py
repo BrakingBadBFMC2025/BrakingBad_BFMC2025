@@ -5,7 +5,7 @@ def create_component(category, component_name, project_root="."):
     existing_categories = ["brain", "drivers", "periodics", "utils"]
 
     path_EmbeddedPlatform = str(os.getcwd())
-    last_backslash = str(os.getcwd())[::-1].index('\\')
+    last_backslash = str(os.getcwd())[::-1].index(os.path.sep)
     filename_Emb = path_EmbeddedPlatform[:len(path_EmbeddedPlatform)-last_backslash]
     filename_CMake = path_EmbeddedPlatform[:len(path_EmbeddedPlatform)-last_backslash] + "CMakeLists.txt"
 

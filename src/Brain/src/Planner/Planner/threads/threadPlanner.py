@@ -4,6 +4,13 @@ from src.utils.messages.messageHandlerSubscriber import messageHandlerSubscriber
 from src.utils.messages.messageHandlerSender import messageHandlerSender
 from enum import Enum
 import time
+
+
+import socket
+
+
+
+
 class threadPlanner(ThreadWithStop):
     """This thread handles Planner.
     Args:
@@ -18,6 +25,10 @@ class threadPlanner(ThreadWithStop):
         self.debugging = debugging
         self.control_type = control_type
 
+
+        self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.server.bind(("127.0.0.1", 9999))
+        self.server.listen(1)
 
 
         self.control_command = {
@@ -62,34 +73,40 @@ class threadPlanner(ThreadWithStop):
         IN_CITY = 2
         IN_HIGHWAY = 3 
 
-    curr_state = State.IDLE
+    curr_state = State.IN_CITY
 
     #main command modifiers (behaviours)
     def canon_behaviour(self):
-        if 
-        self.control_command['arg1'] = min(max(self.control_command['arg1'], 200),400) #confining speed between 200mm/s and 400mm/s
+        #print("canon")
+        if self.curr_state == self.State.IN_CITY:
+            self.control_command['arg1'] = min(max(self.control_command['arg1'], 200),400) #confining speed
+        elif self.curr_state == self.State.IN_HIGHWAY:
+            self.control_command['arg1'] = min(600, max(self.control_command['arg1'], 400))
         self.control_command_pub.send(self.control_command)
 
     def stop_behaviour(self):
+        print("stop behaviour", float(self.spotted_sign['z']))
         stopped=False
         if float(self.spotted_sign['z'])<=50:
-            self.control_command['arg1'] = 100
-            if float(self.spotted_sign['z'])<=30:
-                self.control_command['arg1'] = 50
-                if float(self.spotted_sign['z']) <=25:
-                    self.control_command['arg1'] = 0
-                    stopped =True
-                    
-        self.control_command_pub.send(self.control_command)
+            self.control_command['arg1'] = 50
+            if float(self.spotted_sign['z'])<=35:
+                self.control_command['arg1'] = 0
+                stopped =True
+            self.control_command_pub.send(self.control_command)
+            
+        else:
+            self.canon_behaviour()
+        print(self.control_command)
 
         if stopped:
             time.sleep(3)
+            print("vehicle stopped")
         
         return
 
 
     def parking_behaviour(self):
-        if float(self.spotted_sign['z'])<=30:
+        if float(self.spotted_sign['z'])<=35:
             self.control_command['arg1'] = 100 #slowing down 
                                                 #and looking for a parking spot TODO
 
@@ -97,39 +114,46 @@ class threadPlanner(ThreadWithStop):
         return
 
     def crosswalk_behaviour(self):
-        if float(self.spotted_sign['z']) <=30:
-            self.control_command['arg1'] = 100 #slowing down
+        if float(self.spotted_sign['z']) <=35:
+            self.control_command['arg1'] = 50 #slowing down
                                                 #is pedestrian ahead, stop TODO
         self.control_command_pub.send(self.control_command)
         return
 
     def priority_behaviour(self):
-        self.control_command_pub.send(self.control_command)
-        pass
+        self.canon_behaviour()
+        
 
     def roundabout_behaviour(self):
-        self.control_command_pub.send(self.control_command)
-        pass
+        self.canon_behaviour()
+        
 
     def highway_entry_behaviour(self):
         self.curr_state = self.State.IN_HIGHWAY
-        self.control_command['arg1'] = min(400, max(self.control_command['arg1'], 200))
-        self.control_command_pub.send(self.control_command)
-        pass
+        self.canon_behaviour()
+        
 
     def highway_exit_behaviour(self):
-        if float(self.spotted_sign['z']) <= 40:
+        if float(self.spotted_sign['z']) <= 80:
             self.curr_state = self.State.IN_CITY
+            self.control_command['arg1']=100
+            self.control_command_pub.send(self.control_command)
         self.canon_behaviour()
-        pass
+        
 
     def one_way_behaviour(self):
-        self.control_command_pub.send(self.control_command)
-        pass
+        self.canon_behaviour()
+        
 
     def no_entry_behaviour(self):
-        self.control_command_pub.send(self.control_command)
-        pass
+        if float(self.spotted_sign['z']) <= 40:
+            self.curr_state=self.State.IN_CITY
+            self.control_command['arg1'] = -100
+            self.control_command_pub.send(self.control_command)
+            print('wpa')
+        else:
+            self.canon_behaviour()
+        
 
 
     def run(self):
@@ -138,11 +162,32 @@ class threadPlanner(ThreadWithStop):
         while self._running:
             self.main_command = self.main_command_sub.receive()
 
+
+            data=0
+            self.server.setblocking(False)  # Make the socket non-blocking
+            try:
+                client, addr = self.server.accept()
+                data = client.recv(1024).decode()
+                print("Turn Prediction:", data)
+                client.close()
+            except BlockingIOError:
+                #print("[Planner] Connection Failed")
+                pass  # No client is currently connecting
+
+            command_ = 0 
+            if (data == "Left Turn"):
+                command_ = -50
+            elif (data == "Right Turn"):
+                command_ = 50
+            else:
+                command_ = 0 
+
+            self.control_command['arg2'] = command_
+
             #if new command from main arrived, update, else go on with the previous
             if self.main_command is not None:
                 self.control_command['arg1'] = self.main_command["arg1"]
                 self.control_command['type'] = self.main_command["type"]
-                self.control_command['arg2'] = self.main_command["arg2"]
 
             #check for spotted signs #TODO make sure we can handle multiple at a time    
             self.spotted_sign = self.sign_sub.receive()
@@ -152,12 +197,15 @@ class threadPlanner(ThreadWithStop):
             else:
                 #if there is a sign, call the appropriate behaviour to do whatever with the control_command    
                 self.behaviours.get(self.spotted_sign['label'], self.canon_behaviour)()
-            
+                print("Spotted sign: ",self.spotted_sign['label'])
+
             time.sleep(time_interval)
 
     def subscribe(self):
         self.sign_sub = messageHandlerSubscriber(self.queuesList, allMessages.Sign, "lastOnly", True)
         self.main_command_sub = messageHandlerSubscriber(self.queuesList, allMessages.Main_Command, "lastOnly", True)
+
+
 
         self.control_command_pub = messageHandlerSender(self.queuesList, allMessages.Control_Command)
 

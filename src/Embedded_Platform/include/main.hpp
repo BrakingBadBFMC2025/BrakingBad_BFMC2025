@@ -60,3 +60,9 @@
 #include <utils/taskmanager.hpp>
 /* Header file for the task manager library, which  applies periodically the fun function of it's children*/
 #include <utils/task.hpp>
+/* Header file for the As5600 functionality */
+#include <drivers/as5600.hpp>
+/* Header file for the Encoders functionality */
+#include <periodics/encoders.hpp>
+/* Header file for the Ekf functionality */
+#include <brain/ekf.hpp>

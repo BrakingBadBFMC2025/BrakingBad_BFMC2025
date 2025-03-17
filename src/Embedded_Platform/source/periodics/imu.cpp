@@ -209,6 +209,7 @@ namespace periodics{
     void CImu::serialCallbackIMUcommand(char const * a, char * b) {
         uint8_t l_isActivate=0;
         uint8_t l_res = sscanf(a,"%hhu",&l_isActivate);
+        printf("IMU CMD RECEIVED: A:%s AND B:%s\n", a, b);  // Raw input debug
 
         l_isActivate = atoi(a);
         l_res = 1;
@@ -222,7 +223,9 @@ namespace periodics{
                 sprintf(b,"1");
             }
             else{
-                sprintf(b,"kl 15/30 is required!!");
+                
+                //sprintf(b,"kl 15/30 is required!!");
+                sprintf(b,"GEIA SOU PAIXTH");
             }
             
         }else{

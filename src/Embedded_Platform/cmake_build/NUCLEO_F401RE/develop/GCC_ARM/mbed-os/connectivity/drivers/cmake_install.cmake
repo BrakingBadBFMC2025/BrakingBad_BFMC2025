@@ -1,4 +1,4 @@
-# Install script for directory: /home/maria/Documents/Embedded_Platform/mbed-os/connectivity/drivers
+# Install script for directory: /home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/mbed-os/connectivity/drivers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,48 +32,48 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "TRUE")
 endif()
 
-# Set default install directory permissions.
+# Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/arm-none-eabi-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/802.15.4_RF/cmake_install.cmake")
+  include("/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/802.15.4_RF/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/ble/cmake_install.cmake")
+  include("/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/ble/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/cellular/cmake_install.cmake")
+  include("/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/cellular/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/emac/cmake_install.cmake")
+  include("/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/emac/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/lora/cmake_install.cmake")
+  include("/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/lora/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/mbedtls/cmake_install.cmake")
+  include("/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/mbedtls/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/nfc/cmake_install.cmake")
+  include("/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/nfc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/Documents/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/wifi/cmake_install.cmake")
+  include("/home/m1tsos/BB/BrakingBad_BFMC2025/src/Embedded_Platform/cmake_build/NUCLEO_F401RE/develop/GCC_ARM/mbed-os/connectivity/drivers/wifi/cmake_install.cmake")
 endif()
 

@@ -3,7 +3,7 @@ import time
 from picamera2 import Picamera2
 from ultralytics import YOLO
 
-def process_video(output_file="annotated_video.avi", frame_width=640, frame_height=640, fps=20):
+def process_video(output_file="annotated_video.avi", frame_width=640, frame_height=480, fps=12):
     # Initialize Picamera2 with the desired resolution
     picam2 = Picamera2()
     picam2.preview_configuration.main.size = (frame_width, frame_height)
@@ -13,12 +13,11 @@ def process_video(output_file="annotated_video.avi", frame_width=640, frame_heig
     picam2.start()
 
     # Load the YOLO model (replace with your NCNN model if needed)
-    model = YOLO("best_ncnn_model_full/")  # or use your NCNN model initialization here
+    model = YOLO("model_weights/best_ncnn_model/")
 
     # Setup VideoWriter for saving the annotated video
     fourcc = cv2.VideoWriter_fourcc(*"XVID")
     video_writer = cv2.VideoWriter(output_file, fourcc, fps, (frame_width, frame_height))
-    
     print("Processing video frames. Press Ctrl+C to stop.")
 
     # For FPS calculation

@@ -1,0 +1,801 @@
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command-line option ‘-Wnon-virtual-dtor’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type  -Wnon-virtual-dtor'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_faa86/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_faa86.dir/build.make CMakeFiles/cmTC_faa86.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_faa86.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type  -Wnon-virtual-dtor -o CMakeFiles/cmTC_faa86.dir/src.c.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command-line option ‘-Wnon-virtual-dtor’ is valid for C++/ObjC++ but not for C
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking C executable cmTC_faa86
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_faa86.dir/link.txt --verbose=1
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_faa86.dir/src.c.o -o cmTC_faa86 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command-line option ‘-Wmissing-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations  -Wmissing-prototypes'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9c52e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9c52e.dir/build.make CMakeFiles/cmTC_9c52e.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9c52e.dir/src.cxx.o
+/usr/bin/c++   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations  -Wmissing-prototypes -std=c++11 -o CMakeFiles/cmTC_9c52e.dir/src.cxx.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command-line option ‘-Wmissing-prototypes’ is valid for C/ObjC but not for C++
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking CXX executable cmTC_9c52e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c52e.dir/link.txt --verbose=1
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_9c52e.dir/src.cxx.o -o cmTC_9c52e 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command-line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations  -Wstrict-prototypes'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6b896/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6b896.dir/build.make CMakeFiles/cmTC_6b896.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6b896.dir/src.cxx.o
+/usr/bin/c++   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations  -Wstrict-prototypes -std=c++11 -o CMakeFiles/cmTC_6b896.dir/src.cxx.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command-line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking CXX executable cmTC_6b896
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b896.dir/link.txt --verbose=1
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_6b896.dir/src.cxx.o -o cmTC_6b896 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command-line option ‘-Wsign-promo’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wsign-promo'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_bddf0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_bddf0.dir/build.make CMakeFiles/cmTC_bddf0.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bddf0.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wsign-promo -o CMakeFiles/cmTC_bddf0.dir/src.c.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command-line option ‘-Wsign-promo’ is valid for C++/ObjC++ but not for C
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking C executable cmTC_bddf0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bddf0.dir/link.txt --verbose=1
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_bddf0.dir/src.c.o -o cmTC_bddf0 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command-line option ‘-Wsuggest-override’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wsuggest-override'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0b87a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0b87a.dir/build.make CMakeFiles/cmTC_0b87a.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0b87a.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wsuggest-override -o CMakeFiles/cmTC_0b87a.dir/src.c.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command-line option ‘-Wsuggest-override’ is valid for C++/ObjC++ but not for C
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking C executable cmTC_0b87a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0b87a.dir/link.txt --verbose=1
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_0b87a.dir/src.c.o -o cmTC_0b87a 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command-line option ‘-Wno-delete-non-virtual-dtor’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wno-delete-non-virtual-dtor'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_43b30/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_43b30.dir/build.make CMakeFiles/cmTC_43b30.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_43b30.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wno-delete-non-virtual-dtor -o CMakeFiles/cmTC_43b30.dir/src.c.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command-line option ‘-Wno-delete-non-virtual-dtor’ is valid for C++/ObjC++ but not for C
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking C executable cmTC_43b30
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43b30.dir/link.txt --verbose=1
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_43b30.dir/src.c.o -o cmTC_43b30 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-unnamed-type-template-args’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_235cf/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_235cf.dir/build.make CMakeFiles/cmTC_235cf.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_235cf.dir/src.cxx.o
+/usr/bin/c++   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args -std=c++11 -o CMakeFiles/cmTC_235cf.dir/src.cxx.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-unnamed-type-template-args’ may have been intended to silence earlier diagnostics
+Linking CXX executable cmTC_235cf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_235cf.dir/link.txt --verbose=1
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_235cf.dir/src.cxx.o -o cmTC_235cf 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: note: unrecognized command-line option ‘-Wno-unnamed-type-template-args’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_76853/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_76853.dir/build.make CMakeFiles/cmTC_76853.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_76853.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wno-unnamed-type-template-args -o CMakeFiles/cmTC_76853.dir/src.c.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1: note: unrecognized command-line option ‘-Wno-unnamed-type-template-args’ may have been intended to silence earlier diagnostics
+Linking C executable cmTC_76853
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76853.dir/link.txt --verbose=1
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_76853.dir/src.c.o -o cmTC_76853 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_dotprod.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2fa45/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2fa45.dir/build.make CMakeFiles/cmTC_2fa45.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File '/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_dotprod.cpp' has modification time 864313 s in the future
+Building CXX object CMakeFiles/cmTC_2fa45.dir/cpu_neon_dotprod.cpp.o
+/usr/bin/c++   -O3 -DNDEBUG -fPIE -std=c++11 -o CMakeFiles/cmTC_2fa45.dir/cpu_neon_dotprod.cpp.o -c /home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_dotprod.cpp
+In file included from /home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_dotprod.cpp:4:
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h: In function ‘int test()’:
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29513:1: error: inlining failed in call to ‘always_inline’ ‘uint32x4_t vdotq_u32(uint32x4_t, uint8x16_t, uint8x16_t)’: target specific option mismatch
+29513 | vdotq_u32 (uint32x4_t __r, uint8x16_t __a, uint8x16_t __b)
+      | ^~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_dotprod.cpp:12:33: note: called from here
+   12 |     uint32x4_t v_dst = vdotq_u32(v_src, v_m0, v_m1);
+      |                        ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_2fa45.dir/build.make:78: CMakeFiles/cmTC_2fa45.dir/cpu_neon_dotprod.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_2fa45/fast] Error 2
+
+
+===== END =====
+
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_bcc7a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_bcc7a.dir/build.make CMakeFiles/cmTC_bcc7a.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File '/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp' has modification time 864312 s in the future
+Building CXX object CMakeFiles/cmTC_bcc7a.dir/cpu_neon_fp16.cpp.o
+/usr/bin/c++   -O3 -DNDEBUG -fPIE -std=c++11 -o CMakeFiles/cmTC_bcc7a.dir/cpu_neon_fp16.cpp.o -c /home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp
+In file included from /home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:4:
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h: In function ‘void test()’:
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:28:24: note: called from here
+   28 |     d = vfmaq_laneq_f16(d, s1, s2, 0);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29166:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vsubq_f16(float16x8_t, float16x8_t)’: target specific option mismatch
+29166 | vsubq_f16 (float16x8_t __a, float16x8_t __b)
+      | ^~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:27:30: note: called from here
+   27 |     float16x8_t d = vsubq_f16(s1, s1);
+      |                     ~~~~~~~~~^~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:29:24: note: called from here
+   29 |     d = vfmaq_laneq_f16(d, s1, s2, 1);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:30:24: note: called from here
+   30 |     d = vfmaq_laneq_f16(d, s1, s2, 2);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:31:24: note: called from here
+   31 |     d = vfmaq_laneq_f16(d, s1, s2, 3);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:32:24: note: called from here
+   32 |     d = vfmaq_laneq_f16(d, s1, s2, 4);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:33:24: note: called from here
+   33 |     d = vfmaq_laneq_f16(d, s1, s2, 5);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:34:24: note: called from here
+   34 |     d = vfmaq_laneq_f16(d, s1, s2, 6);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:35:24: note: called from here
+   35 |     d = vfmaq_laneq_f16(d, s1, s2, 7);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:28:24: note: called from here
+   28 |     d = vfmaq_laneq_f16(d, s1, s2, 0);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29166:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vsubq_f16(float16x8_t, float16x8_t)’: target specific option mismatch
+29166 | vsubq_f16 (float16x8_t __a, float16x8_t __b)
+      | ^~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:27:30: note: called from here
+   27 |     float16x8_t d = vsubq_f16(s1, s1);
+      |                     ~~~~~~~~~^~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:28:24: note: called from here
+   28 |     d = vfmaq_laneq_f16(d, s1, s2, 0);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29166:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vsubq_f16(float16x8_t, float16x8_t)’: target specific option mismatch
+29166 | vsubq_f16 (float16x8_t __a, float16x8_t __b)
+      | ^~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:27:30: note: called from here
+   27 |     float16x8_t d = vsubq_f16(s1, s1);
+      |                     ~~~~~~~~~^~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:29:24: note: called from here
+   29 |     d = vfmaq_laneq_f16(d, s1, s2, 1);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:30:24: note: called from here
+   30 |     d = vfmaq_laneq_f16(d, s1, s2, 2);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:31:24: note: called from here
+   31 |     d = vfmaq_laneq_f16(d, s1, s2, 3);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:32:24: note: called from here
+   32 |     d = vfmaq_laneq_f16(d, s1, s2, 4);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:33:24: note: called from here
+   33 |     d = vfmaq_laneq_f16(d, s1, s2, 5);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:34:24: note: called from here
+   34 |     d = vfmaq_laneq_f16(d, s1, s2, 6);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:29245:1: error: inlining failed in call to ‘always_inline’ ‘float16x8_t vfmaq_laneq_f16(float16x8_t, float16x8_t, float16x8_t, int)’: target specific option mismatch
+29245 | vfmaq_laneq_f16 (float16x8_t __a, float16x8_t __b,
+      | ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_fp16.cpp:35:24: note: called from here
+   35 |     d = vfmaq_laneq_f16(d, s1, s2, 7);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_bcc7a.dir/build.make:78: CMakeFiles/cmTC_bcc7a.dir/cpu_neon_fp16.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_bcc7a/fast] Error 2
+
+
+===== END =====
+
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_bf16.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_361cc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_361cc.dir/build.make CMakeFiles/cmTC_361cc.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File '/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_bf16.cpp' has modification time 864311 s in the future
+Building CXX object CMakeFiles/cmTC_361cc.dir/cpu_neon_bf16.cpp.o
+/usr/bin/c++   -O3 -DNDEBUG -fPIE -std=c++11 -o CMakeFiles/cmTC_361cc.dir/cpu_neon_bf16.cpp.o -c /home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_bf16.cpp
+In file included from /home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_bf16.cpp:3:
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h: In function ‘bfloat16x8_t vld1q_as_bf16(const float*)’:
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:30644:1: error: inlining failed in call to ‘always_inline’ ‘bfloat16x8_t vcombine_bf16(bfloat16x4_t, bfloat16x4_t)’: target specific option mismatch
+30644 | vcombine_bf16 (bfloat16x4_t __a, bfloat16x4_t __b)
+      | ^~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_bf16.cpp:14:25: note: called from here
+   14 |     return vcombine_bf16(vcvt_bf16_f32(s0), vcvt_bf16_f32(s1));
+      |            ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:31536:1: error: inlining failed in call to ‘always_inline’ ‘bfloat16x4_t vcvt_bf16_f32(float32x4_t)’: target specific option mismatch
+31536 | vcvt_bf16_f32 (float32x4_t __a)
+      | ^~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_bf16.cpp:14:25: note: called from here
+   14 |     return vcombine_bf16(vcvt_bf16_f32(s0), vcvt_bf16_f32(s1));
+      |            ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:31536:1: error: inlining failed in call to ‘always_inline’ ‘bfloat16x4_t vcvt_bf16_f32(float32x4_t)’: target specific option mismatch
+31536 | vcvt_bf16_f32 (float32x4_t __a)
+      | ^~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_bf16.cpp:14:25: note: called from here
+   14 |     return vcombine_bf16(vcvt_bf16_f32(s0), vcvt_bf16_f32(s1));
+      |            ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:30644:1: error: inlining failed in call to ‘always_inline’ ‘bfloat16x8_t vcombine_bf16(bfloat16x4_t, bfloat16x4_t)’: target specific option mismatch
+30644 | vcombine_bf16 (bfloat16x4_t __a, bfloat16x4_t __b)
+      | ^~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_bf16.cpp:14:25: note: called from here
+   14 |     return vcombine_bf16(vcvt_bf16_f32(s0), vcvt_bf16_f32(s1));
+      |            ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:31536:1: error: inlining failed in call to ‘always_inline’ ‘bfloat16x4_t vcvt_bf16_f32(float32x4_t)’: target specific option mismatch
+31536 | vcvt_bf16_f32 (float32x4_t __a)
+      | ^~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_bf16.cpp:14:25: note: called from here
+   14 |     return vcombine_bf16(vcvt_bf16_f32(s0), vcvt_bf16_f32(s1));
+      |            ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:31536:1: error: inlining failed in call to ‘always_inline’ ‘bfloat16x4_t vcvt_bf16_f32(float32x4_t)’: target specific option mismatch
+31536 | vcvt_bf16_f32 (float32x4_t __a)
+      | ^~~~~~~~~~~~~
+/home/bb/Brain/opencv/opencv-4.x/cmake/checks/cpu_neon_bf16.cpp:14:25: note: called from here
+   14 |     return vcombine_bf16(vcvt_bf16_f32(s0), vcvt_bf16_f32(s1));
+      |            ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_361cc.dir/build.make:78: CMakeFiles/cmTC_361cc.dir/cpu_neon_bf16.cpp.o] Error 1
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_361cc/fast] Error 2
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command-line option ‘-fvisibility-inlines-hidden’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden  -fvisibility-inlines-hidden'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6fd82/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6fd82.dir/build.make CMakeFiles/cmTC_6fd82.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6fd82.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden  -fvisibility-inlines-hidden -o CMakeFiles/cmTC_6fd82.dir/src.c.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command-line option ‘-fvisibility-inlines-hidden’ is valid for C++/ObjC++ but not for C
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking C executable cmTC_6fd82
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6fd82.dir/link.txt --verbose=1
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_6fd82.dir/src.c.o -o cmTC_6fd82 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Determining if the elf_aux_info exist failed with the following output:
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-cVbPDW
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ef7e6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ef7e6.dir/build.make CMakeFiles/cmTC_ef7e6.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-cVbPDW'
+Building C object CMakeFiles/cmTC_ef7e6.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden  -O3 -DNDEBUG  -DNDEBUG -fPIE -o CMakeFiles/cmTC_ef7e6.dir/CheckSymbolExists.c.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-cVbPDW/CheckSymbolExists.c
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-cVbPDW/CheckSymbolExists.c: In function ‘main’:
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-cVbPDW/CheckSymbolExists.c:8:19: error: ‘elf_aux_info’ undeclared (first use in this function)
+    8 |   return ((int*)(&elf_aux_info))[argc];
+      |                   ^~~~~~~~~~~~
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-cVbPDW/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-cVbPDW/CheckSymbolExists.c:4:14: warning: parameter ‘argc’ set but not used [-Wunused-but-set-parameter]
+    4 | int main(int argc, char** argv)
+      |          ~~~~^~~~
+gmake[1]: *** [CMakeFiles/cmTC_ef7e6.dir/build.make:78: CMakeFiles/cmTC_ef7e6.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-cVbPDW'
+gmake: *** [Makefile:127: cmTC_ef7e6/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <sys/auxv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef elf_aux_info
+  return ((int*)(&elf_aux_info))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: note: unrecognized command-line option ‘-Wno-implicit-const-int-float-conversion’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-implicit-const-int-float-conversion'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_bf691/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_bf691.dir/build.make CMakeFiles/cmTC_bf691.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bf691.dir/src.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-implicit-const-int-float-conversion -o CMakeFiles/cmTC_bf691.dir/src.c.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1: note: unrecognized command-line option ‘-Wno-implicit-const-int-float-conversion’ may have been intended to silence earlier diagnostics
+Linking C executable cmTC_bf691
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf691.dir/link.txt --verbose=1
+/usr/bin/cc    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden  -O3 -DNDEBUG  -DNDEBUG   -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  CMakeFiles/cmTC_bf691.dir/src.c.o -o cmTC_bf691 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: note: unrecognized command-line option ‘-Wno-documentation’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-documentation'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fed3c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fed3c.dir/build.make CMakeFiles/cmTC_fed3c.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fed3c.dir/src.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -Wno-unused-but-set-variable -Wno-missing-prototypes -Wno-missing-declarations  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-documentation -o CMakeFiles/cmTC_fed3c.dir/src.c.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1: note: unrecognized command-line option ‘-Wno-documentation’ may have been intended to silence earlier diagnostics
+Linking C executable cmTC_fed3c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fed3c.dir/link.txt --verbose=1
+/usr/bin/cc    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -Wno-unused-but-set-variable -Wno-missing-prototypes -Wno-missing-declarations  -O3 -DNDEBUG  -DNDEBUG   -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  CMakeFiles/cmTC_fed3c.dir/src.c.o -o cmTC_fed3c 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Determining if the _aligned_malloc exist failed with the following output:
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-p7dEq1
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d9632/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d9632.dir/build.make CMakeFiles/cmTC_d9632.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-p7dEq1'
+Building C object CMakeFiles/cmTC_d9632.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -Wno-unused-but-set-variable -Wno-missing-prototypes -Wno-missing-declarations  -O3 -DNDEBUG  -DNDEBUG -fPIE -o CMakeFiles/cmTC_d9632.dir/CheckSymbolExists.c.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-p7dEq1/CheckSymbolExists.c
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-p7dEq1/CheckSymbolExists.c: In function ‘main’:
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-p7dEq1/CheckSymbolExists.c:8:19: error: ‘_aligned_malloc’ undeclared (first use in this function)
+    8 |   return ((int*)(&_aligned_malloc))[argc];
+      |                   ^~~~~~~~~~~~~~~
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-p7dEq1/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-p7dEq1/CheckSymbolExists.c:4:14: warning: parameter ‘argc’ set but not used [-Wunused-but-set-parameter]
+    4 | int main(int argc, char** argv)
+      |          ~~~~^~~~
+gmake[1]: *** [CMakeFiles/cmTC_d9632.dir/build.make:78: CMakeFiles/cmTC_d9632.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-p7dEq1'
+gmake: *** [Makefile:127: cmTC_d9632/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _aligned_malloc
+  return ((int*)(&_aligned_malloc))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-inconsistent-missing-override’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-inconsistent-missing-override'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_265dd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_265dd.dir/build.make CMakeFiles/cmTC_265dd.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_265dd.dir/src.cxx.o
+/usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wsign-promo -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-shadow -Wno-unused -Wno-sign-compare -Wno-undef -Wno-missing-declarations -Wno-uninitialized -Wno-switch -Wno-parentheses -Wno-array-bounds -Wno-extra -Wno-deprecated-declarations -Wno-misleading-indentation -Wno-deprecated -Wno-suggest-override  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-inconsistent-missing-override -std=c++11 -o CMakeFiles/cmTC_265dd.dir/src.cxx.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-inconsistent-missing-override’ may have been intended to silence earlier diagnostics
+Linking CXX executable cmTC_265dd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_265dd.dir/link.txt --verbose=1
+/usr/bin/c++    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wsign-promo -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-shadow -Wno-unused -Wno-sign-compare -Wno-undef -Wno-missing-declarations -Wno-uninitialized -Wno-switch -Wno-parentheses -Wno-array-bounds -Wno-extra -Wno-deprecated-declarations -Wno-misleading-indentation -Wno-deprecated -Wno-suggest-override  -O3 -DNDEBUG  -DNDEBUG   -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  CMakeFiles/cmTC_265dd.dir/src.cxx.o -o cmTC_265dd 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command-line option ‘-Wno-missing-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-missing-prototypes'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3cf63/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3cf63.dir/build.make CMakeFiles/cmTC_3cf63.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3cf63.dir/src.cxx.o
+/usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wsign-promo -Wno-delete-non-virtual-dtor -Wno-comment -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-shadow -Wno-unused -Wno-sign-compare -Wno-undef -Wno-missing-declarations -Wno-uninitialized -Wno-switch -Wno-parentheses -Wno-array-bounds -Wno-extra -Wno-deprecated-declarations -Wno-misleading-indentation -Wno-deprecated -Wno-suggest-override -Wno-implicit-fallthrough -Wno-tautological-compare  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-missing-prototypes -std=c++11 -o CMakeFiles/cmTC_3cf63.dir/src.cxx.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command-line option ‘-Wno-missing-prototypes’ is valid for C/ObjC but not for C++
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+Linking CXX executable cmTC_3cf63
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3cf63.dir/link.txt --verbose=1
+/usr/bin/c++    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wsign-promo -Wno-delete-non-virtual-dtor -Wno-comment -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-shadow -Wno-unused -Wno-sign-compare -Wno-undef -Wno-missing-declarations -Wno-uninitialized -Wno-switch -Wno-parentheses -Wno-array-bounds -Wno-extra -Wno-deprecated-declarations -Wno-misleading-indentation -Wno-deprecated -Wno-suggest-override -Wno-implicit-fallthrough -Wno-tautological-compare  -O3 -DNDEBUG  -DNDEBUG   -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  CMakeFiles/cmTC_3cf63.dir/src.cxx.o -o cmTC_3cf63 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-implicit-const-int-float-conversion’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-implicit-const-int-float-conversion'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_dfc89/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_dfc89.dir/build.make CMakeFiles/cmTC_dfc89.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_dfc89.dir/src.cxx.o
+/usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wsign-promo -Wno-delete-non-virtual-dtor -Wno-comment -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-shadow -Wno-unused -Wno-sign-compare -Wno-undef -Wno-missing-declarations -Wno-uninitialized -Wno-switch -Wno-parentheses -Wno-array-bounds -Wno-extra -Wno-deprecated-declarations -Wno-misleading-indentation -Wno-deprecated -Wno-suggest-override -Wno-implicit-fallthrough -Wno-tautological-compare -Wno-reorder -Wno-unused-result  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-implicit-const-int-float-conversion -std=c++11 -o CMakeFiles/cmTC_dfc89.dir/src.cxx.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-implicit-const-int-float-conversion’ may have been intended to silence earlier diagnostics
+Linking CXX executable cmTC_dfc89
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dfc89.dir/link.txt --verbose=1
+/usr/bin/c++    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wsign-promo -Wno-delete-non-virtual-dtor -Wno-comment -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-shadow -Wno-unused -Wno-sign-compare -Wno-undef -Wno-missing-declarations -Wno-uninitialized -Wno-switch -Wno-parentheses -Wno-array-bounds -Wno-extra -Wno-deprecated-declarations -Wno-misleading-indentation -Wno-deprecated -Wno-suggest-override -Wno-implicit-fallthrough -Wno-tautological-compare -Wno-reorder -Wno-unused-result  -O3 -DNDEBUG  -DNDEBUG   -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  CMakeFiles/cmTC_dfc89.dir/src.cxx.o -o cmTC_dfc89 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-wga3Qb
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_cbed8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cbed8.dir/build.make CMakeFiles/cmTC_cbed8.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-wga3Qb'
+Building C object CMakeFiles/cmTC_cbed8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=sgemm_ -O3 -DNDEBUG  -DNDEBUG -fPIE -o CMakeFiles/cmTC_cbed8.dir/CheckFunctionExists.c.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-wga3Qb/CheckFunctionExists.c
+Linking C executable cmTC_cbed8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cbed8.dir/link.txt --verbose=1
+/usr/bin/cc    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=sgemm_ -O3 -DNDEBUG  -DNDEBUG   -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  CMakeFiles/cmTC_cbed8.dir/CheckFunctionExists.c.o -o cmTC_cbed8 
+/usr/bin/ld: CMakeFiles/cmTC_cbed8.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text.startup.main+0x10): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_cbed8.dir/build.make:99: cmTC_cbed8] Error 1
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-wga3Qb'
+gmake: *** [Makefile:127: cmTC_cbed8/fast] Error 2
+
+
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-tautological-undefined-compare’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-tautological-undefined-compare'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_67a46/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_67a46.dir/build.make CMakeFiles/cmTC_67a46.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_67a46.dir/src.cxx.o
+/usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-tautological-undefined-compare -std=c++11 -o CMakeFiles/cmTC_67a46.dir/src.cxx.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-tautological-undefined-compare’ may have been intended to silence earlier diagnostics
+Linking CXX executable cmTC_67a46
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67a46.dir/link.txt --verbose=1
+/usr/bin/c++    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef  -O3 -DNDEBUG  -DNDEBUG   -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  CMakeFiles/cmTC_67a46.dir/src.cxx.o -o cmTC_67a46 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-shorten-64-to-32’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-shorten-64-to-32'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_95505/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_95505.dir/build.make CMakeFiles/cmTC_95505.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_95505.dir/src.cxx.o
+/usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-shorten-64-to-32 -std=c++11 -o CMakeFiles/cmTC_95505.dir/src.cxx.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-shorten-64-to-32’ may have been intended to silence earlier diagnostics
+Linking CXX executable cmTC_95505
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95505.dir/link.txt --verbose=1
+/usr/bin/c++    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable  -O3 -DNDEBUG  -DNDEBUG   -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  CMakeFiles/cmTC_95505.dir/src.cxx.o -o cmTC_95505 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-enum-compare-switch’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-enum-compare-switch'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8cc6c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8cc6c.dir/build.make CMakeFiles/cmTC_8cc6c.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8cc6c.dir/src.cxx.o
+/usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-enum-compare-switch -std=c++11 -o CMakeFiles/cmTC_8cc6c.dir/src.cxx.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-enum-compare-switch’ may have been intended to silence earlier diagnostics
+Linking CXX executable cmTC_8cc6c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8cc6c.dir/link.txt --verbose=1
+/usr/bin/c++    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof  -O3 -DNDEBUG  -DNDEBUG   -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  CMakeFiles/cmTC_8cc6c.dir/src.cxx.o -o cmTC_8cc6c 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-comma’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-comma'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_78e37/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_78e37.dir/build.make CMakeFiles/cmTC_78e37.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_78e37.dir/src.cxx.o
+/usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wno-delete-non-virtual-dtor -Wno-comment -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof -Wno-suggest-override -Wno-implicit-fallthrough -Wno-array-bounds -Wno-stringop-overflow -Wno-stringop-overread -Wno-extra-semi  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-comma -std=c++11 -o CMakeFiles/cmTC_78e37.dir/src.cxx.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-comma’ may have been intended to silence earlier diagnostics
+Linking CXX executable cmTC_78e37
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78e37.dir/link.txt --verbose=1
+/usr/bin/c++    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wno-delete-non-virtual-dtor -Wno-comment -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof -Wno-suggest-override -Wno-implicit-fallthrough -Wno-array-bounds -Wno-stringop-overflow -Wno-stringop-overread -Wno-extra-semi  -O3 -DNDEBUG  -DNDEBUG   -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  CMakeFiles/cmTC_78e37.dir/src.cxx.o -o cmTC_78e37 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-fKPQrQ
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d05d3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d05d3.dir/build.make CMakeFiles/cmTC_d05d3.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-fKPQrQ'
+Building C object CMakeFiles/cmTC_d05d3.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden  -O3 -DNDEBUG  -DNDEBUG -fPIE -o CMakeFiles/cmTC_d05d3.dir/CheckIncludeFile.c.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-fKPQrQ/CheckIncludeFile.c
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-fKPQrQ/CheckIncludeFile.c:1:10: fatal error: sys/videoio.h: No such file or directory
+    1 | #include <sys/videoio.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_d05d3.dir/build.make:78: CMakeFiles/cmTC_d05d3.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeScratch/TryCompile-fKPQrQ'
+gmake: *** [Makefile:127: cmTC_d05d3/fast] Error 2
+
+
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-unused-private-field’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-unused-private-field'
+===== BUILD LOG =====
+Change Dir: /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0838d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0838d.dir/build.make CMakeFiles/cmTC_0838d.dir/build
+gmake[1]: Entering directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0838d.dir/src.cxx.o
+/usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-function -Wno-deprecated-declarations -Wno-overloaded-virtual  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-unused-private-field -std=c++11 -o CMakeFiles/cmTC_0838d.dir/src.cxx.o -c /home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx
+/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-unused-private-field’ may have been intended to silence earlier diagnostics
+Linking CXX executable cmTC_0838d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0838d.dir/link.txt --verbose=1
+/usr/bin/c++    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-function -Wno-deprecated-declarations -Wno-overloaded-virtual  -O3 -DNDEBUG  -DNDEBUG   -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  CMakeFiles/cmTC_0838d.dir/src.cxx.o -o cmTC_0838d 
+gmake[1]: Leaving directory '/home/bb/Brain/opencv/build/CMakeFiles/CMakeTmp'
+
+
+===== END =====
+
